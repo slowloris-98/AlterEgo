@@ -1,0 +1,8 @@
+{
+  "id": "hp",
+  "display_name": "Harry Potter",
+  "tagline": "Which witch or wizard are you?",
+  "description": "Answer 25 questions from the wizarding world. We score you on the Big Five (OCEAN) traits and find the Harry Potter character closest to you.",
+  "theme": "hp",
+  "image": "/art/hp.svg"
+}

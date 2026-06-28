@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Harry Potter night sky and castle">
+  <defs>
+    <linearGradient id="hpSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#10142b"/>
+      <stop offset="0.55" stop-color="#1a1f3e"/>
+      <stop offset="1" stop-color="#0a0c18"/>
+    </linearGradient>
+    <radialGradient id="hpMoon" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff7da"/>
+      <stop offset="0.7" stop-color="#f3e2a6"/>
+      <stop offset="1" stop-color="#cda550" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hpBolt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe9a8"/>
+      <stop offset="1" stop-color="#cd9a3a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#hpSky)"/>
+  <circle cx="640" cy="110" r="58" fill="url(#hpMoon)"/>
+  <circle cx="640" cy="110" r="40" fill="#fbf1c9"/>
+  <g fill="#f3e2a6">
+    <circle cx="70" cy="60" r="2.4"/><circle cx="140" cy="120" r="1.6"/><circle cx="210" cy="50" r="2"/>
+    <circle cx="300" cy="100" r="1.4"/><circle cx="380" cy="60" r="2.2"/><circle cx="470" cy="120" r="1.5"/>
+    <circle cx="520" cy="50" r="1.8"/><circle cx="120" cy="200" r="1.6"/><circle cx="260" cy="170" r="1.3"/>
+    <circle cx="430" cy="190" r="1.7"/><circle cx="700" cy="210" r="1.6"/><circle cx="740" cy="90" r="2"/>
+    <circle cx="40" cy="150" r="1.5"/><circle cx="560" cy="180" r="1.4"/><circle cx="350" cy="150" r="1.5"/>
+  </g>
+  <path d="M0 450 V300 h40 v-40 h28 v40 h26 v-70 h18 v70 h40 v-110 l28 -34 l28 34 v110 h44 v-54 h22 v54 h60 v-150 l34 -40 l34 40 v150 h60 v-54 h22 v54 h48 v-96 h26 v96 h60 v-40 h26 v40 h40 V450 Z"
+        fill="#0c0f1d" opacity="0.96"/>
+  <g fill="#cd9a3a" opacity="0.85">
+    <rect x="178" y="246" width="8" height="12" rx="1"/>
+    <rect x="338" y="216" width="9" height="13" rx="1"/>
+    <rect x="356" y="216" width="9" height="13" rx="1"/>
+    <rect x="600" y="300" width="8" height="12" rx="1"/>
+    <rect x="640" y="300" width="8" height="12" rx="1"/>
+  </g>
+  <path d="M455 150 l-70 96 h44 l-30 86 l86 -118 h-46 l40 -64 z" fill="url(#hpBolt)" opacity="0.92"/>
+</svg>

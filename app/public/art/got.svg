@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Game of Thrones iron throne and ice">
+  <defs>
+    <linearGradient id="gotBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c1018"/>
+      <stop offset="0.5" stop-color="#141a24"/>
+      <stop offset="1" stop-color="#070a0f"/>
+    </linearGradient>
+    <radialGradient id="gotIce" cx="0.5" cy="0.2" r="0.9">
+      <stop offset="0" stop-color="#7abee2" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#7abee2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gotEmber" cx="0.5" cy="1" r="0.8">
+      <stop offset="0" stop-color="#b21c26" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#b21c26" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gotSteel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a424f"/>
+      <stop offset="1" stop-color="#11151c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#gotBg)"/>
+  <rect width="800" height="450" fill="url(#gotIce)"/>
+  <rect width="800" height="450" fill="url(#gotEmber)"/>
+  <!-- icy shards -->
+  <g fill="#7abee2" opacity="0.5">
+    <polygon points="80,450 110,250 140,450"/>
+    <polygon points="150,450 170,320 190,450"/>
+    <polygon points="690,450 715,270 740,450"/>
+    <polygon points="630,450 648,340 666,450"/>
+  </g>
+  <!-- throne silhouette -->
+  <g fill="url(#gotSteel)">
+    <path d="M300 450 V250 q100 -28 200 0 V450 Z"/>
+    <path d="M300 262 h200 v20 h-200 z"/>
+  </g>
+  <g fill="#2a3038" stroke="#4a5360" stroke-width="3" stroke-linecap="round">
+    <line x1="320" y1="250" x2="312" y2="150"/>
+    <line x1="350" y1="244" x2="346" y2="130"/>
+    <line x1="384" y1="240" x2="384" y2="120"/>
+    <line x1="416" y1="240" x2="416" y2="118"/>
+    <line x1="450" y1="244" x2="454" y2="130"/>
+    <line x1="480" y1="250" x2="488" y2="150"/>
+    <line x1="336" y1="248" x2="300" y2="180"/>
+    <line x1="464" y1="248" x2="500" y2="180"/>
+  </g>
+  <g fill="#9fb6c6">
+    <polygon points="312,150 308,138 318,142"/>
+    <polygon points="384,120 380,108 390,112"/>
+    <polygon points="416,118 412,106 422,110"/>
+    <polygon points="488,150 484,138 494,142"/>
+  </g>
+  <!-- snow -->
+  <g fill="#cfe2ee" opacity="0.75">
+    <circle cx="120" cy="80" r="2"/><circle cx="220" cy="140" r="1.6"/><circle cx="560" cy="90" r="2"/>
+    <circle cx="660" cy="150" r="1.6"/><circle cx="700" cy="60" r="1.8"/><circle cx="60" cy="200" r="1.6"/>
+    <circle cx="740" cy="220" r="1.6"/><circle cx="400" cy="70" r="1.6"/>
+  </g>
+</svg>

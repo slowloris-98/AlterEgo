@@ -52,6 +52,8 @@ export interface FranchiseMeta {
   tagline?: string;
   description?: string;
   theme?: string;
+  /** Optional card art shown behind the franchise card on the landing page. */
+  image?: string;
 }
 
 export interface Franchise {

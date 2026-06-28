@@ -18,36 +18,54 @@
   --danger: 248 113 113;
 }
 
-/* Game of Thrones — warm Westeros palette, scoped to /test/got. */
+/* Game of Thrones — cold iron + White Walker ice blue, Targaryen red, scoped to /test/got. */
 [data-theme="got"] {
-  --bg: 12 10 9;
-  --surface: 28 25 23;
-  --border: 68 64 60;
-  --fg: 231 224 207;
-  --muted: 168 162 158;
-  --accent: 201 162 75;
-  --accent-ink: 12 10 9;
-  --danger: 185 28 28;
+  --bg: 8 11 15;
+  --surface: 20 26 33;
+  --border: 56 66 80;
+  --fg: 226 232 238;
+  --muted: 148 160 174;
+  --accent: 122 190 226;
+  --accent-ink: 8 11 15;
+  --danger: 178 30 38;
 
   background-image:
-    radial-gradient(1200px 600px at 50% -10%, rgba(201, 162, 75, 0.08), transparent),
-    radial-gradient(800px 400px at 100% 100%, rgba(185, 28, 28, 0.06), transparent);
+    radial-gradient(1200px 600px at 50% -10%, rgba(122, 190, 226, 0.12), transparent),
+    radial-gradient(800px 420px at 100% 100%, rgba(150, 28, 34, 0.07), transparent);
 }
 
-/* Friends — Monica's purple door + Central Perk warmth, scoped to /test/friends. */
+/* Friends — lavender-poster purple base with a bright primary-yellow pop, scoped to /test/friends. */
 [data-theme="friends"] {
-  --bg: 14 11 18;
-  --surface: 28 22 36;
-  --border: 70 58 86;
-  --fg: 240 234 246;
-  --muted: 176 166 188;
-  --accent: 226 168 74;
-  --accent-ink: 14 11 18;
-  --danger: 220 80 80;
+  --bg: 42 26 72;
+  --surface: 56 36 92;
+  --border: 96 74 144;
+  --fg: 244 240 252;
+  --muted: 192 180 218;
+  --accent: 245 206 56;
+  --accent-ink: 36 22 60;
+  --danger: 226 64 58;
 
   background-image:
-    radial-gradient(1200px 600px at 50% -10%, rgba(139, 92, 198, 0.12), transparent),
-    radial-gradient(800px 400px at 100% 100%, rgba(226, 168, 74, 0.07), transparent);
+    radial-gradient(1200px 600px at 50% -10%, rgba(150, 110, 220, 0.16), transparent),
+    radial-gradient(820px 420px at 100% 100%, rgba(245, 206, 56, 0.08), transparent),
+    radial-gradient(680px 380px at 0% 90%, rgba(226, 64, 58, 0.05), transparent);
+}
+
+/* Harry Potter — Hogwarts night sky + Great Hall candle gold, scoped to /test/hp. */
+[data-theme="hp"] {
+  --bg: 9 11 20;
+  --surface: 22 25 40;
+  --border: 58 62 92;
+  --fg: 236 230 214;
+  --muted: 166 168 190;
+  --accent: 205 165 80;
+  --accent-ink: 9 11 20;
+  --danger: 178 34 52;
+
+  background-image:
+    radial-gradient(1200px 600px at 50% -10%, rgba(86, 112, 196, 0.12), transparent),
+    radial-gradient(800px 420px at 100% 100%, rgba(205, 165, 80, 0.08), transparent),
+    radial-gradient(700px 380px at 0% 90%, rgba(122, 28, 52, 0.06), transparent);
 }
 
 body {

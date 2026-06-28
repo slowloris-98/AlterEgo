@@ -1,0 +1,330 @@
+{
+  "franchise": "hp",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "It is a rainy Sunday in the Gryffindor common room and someone wonders aloud how to pass the long afternoon.",
+      "trait": "openness",
+      "reverse": false,
+      "options": [
+        { "label": "You reel off half a dozen schemes before the fire has finished crackling", "value": 5 },
+        { "label": "You offer a couple of genuinely fun ideas worth trying", "value": 4 },
+        { "label": "You have one idea, and you share it", "value": 3 },
+        { "label": "You wait to hear what everyone else fancies doing", "value": 2 },
+        { "label": "You have nothing; you would rather just follow along", "value": 1 }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "You step into an abandoned classroom full of dusty, forgotten magical objects and are asked what could be made of it.",
+      "trait": "openness",
+      "reverse": false,
+      "options": [
+        { "label": "You picture the whole place transformed, every cobwebbed corner reborn", "value": 5 },
+        { "label": "You imagine it clearly enough to describe it", "value": 4 },
+        { "label": "You see roughly what it might become", "value": 3 },
+        { "label": "You struggle to picture much beyond the dust", "value": 2 },
+        { "label": "You see only an empty room; imagining more is a waste of time", "value": 1 }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "A professor lays out the tangled theory behind a fiendishly complicated new spell.",
+      "trait": "openness",
+      "reverse": false,
+      "options": [
+        { "label": "You have it worked out before they finish the explanation", "value": 5 },
+        { "label": "You follow it easily", "value": 4 },
+        { "label": "You get there after a moment's thought", "value": 3 },
+        { "label": "You need it explained a second time", "value": 2 },
+        { "label": "You give up; that kind of theory just loses you", "value": 1 }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "Late by the fire the talk drifts to deep questions of magic, fate, and what lies beyond the Veil.",
+      "trait": "openness",
+      "reverse": true,
+      "options": [
+        { "label": "That kind of talk bores you; you would rather raid the kitchens", "value": 5 },
+        { "label": "You have little patience for it, but you sit through it", "value": 4 },
+        { "label": "You will join in if it turns to something practical", "value": 3 },
+        { "label": "You find the ideas worth chewing on", "value": 2 },
+        { "label": "You love wondering about the great mysteries for their own sake", "value": 1 }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "A friend is cornered and needs a clever, made-up excuse to explain why they were out of bounds after curfew.",
+      "trait": "openness",
+      "reverse": true,
+      "options": [
+        { "label": "Nothing comes to you; inventing stories just is not in you", "value": 5 },
+        { "label": "You manage little; that kind of inventiveness escapes you", "value": 4 },
+        { "label": "You can force out one plain, obvious excuse", "value": 3 },
+        { "label": "A decent cover story takes shape after some thought", "value": 2 },
+        { "label": "Three ridiculous alibis spring to mind at once", "value": 1 }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "A crucial exam in a difficult subject is only a week away.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "options": [
+        { "label": "A colour-coded revision timetable, every topic timed to the minute", "value": 5 },
+        { "label": "A solid study plan made and the schedule set", "value": 4 },
+        { "label": "A rough plan, good enough to start revising", "value": 3 },
+        { "label": "You will cram it the night before", "value": 2 },
+        { "label": "You had not really thought about it", "value": 1 }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "You are brewing a tricky potion from a long, exacting set of instructions.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "options": [
+        { "label": "You catch every step and the tiny warnings buried in the footnotes", "value": 5 },
+        { "label": "You read it closely and follow the key steps", "value": 4 },
+        { "label": "You skim it for the main points", "value": 3 },
+        { "label": "You trust it will probably turn out fine", "value": 2 },
+        { "label": "You just chuck the ingredients in and hope", "value": 1 }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "Your trunk, your desk, and the state of your corner of the dormitory are entirely up to you.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "options": [
+        { "label": "Everything labelled and in its place, quills sorted just so", "value": 5 },
+        { "label": "You keep it mostly tidy and your things in order", "value": 4 },
+        { "label": "Neat where it matters, chaos everywhere else", "value": 3 },
+        { "label": "You let it pile up and sort it out later", "value": 2 },
+        { "label": "A glorious mess suits you fine; tidying is overrated", "value": 1 }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "You are put in charge of the supplies and schedule for a secret study group.",
+      "trait": "conscientiousness",
+      "reverse": true,
+      "options": [
+        { "label": "Notes lost and meetings double-booked; it falls apart within a week", "value": 5 },
+        { "label": "Things slip and get muddled more often than not", "value": 4 },
+        { "label": "A few mistakes creep in, nothing serious", "value": 3 },
+        { "label": "It mostly stays in order", "value": 2 },
+        { "label": "You run it flawlessly, every detail accounted for", "value": 1 }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "It is your turn for the dull duty nobody wants, like a late-night round of prefect patrols or scrubbing cauldrons in detention.",
+      "trait": "conscientiousness",
+      "reverse": true,
+      "options": [
+        { "label": "You talk someone else into covering it; it can wait", "value": 5 },
+        { "label": "You put it off whenever you can", "value": 4 },
+        { "label": "You do it, grumbling and late", "value": 3 },
+        { "label": "You get it done without complaint", "value": 2 },
+        { "label": "Your turn is your turn; you would never shirk it", "value": 1 }
+      ]
+    },
+    {
+      "id": "q11",
+      "text": "The Great Hall is roaring with a victory feast after a Quidditch final, candles blazing overhead.",
+      "trait": "extraversion",
+      "reverse": false,
+      "options": [
+        { "label": "You are the centre of it, leading the cheers and the songs", "value": 5 },
+        { "label": "You are lively and pull people in around you", "value": 4 },
+        { "label": "You enjoy yourself with a few good friends", "value": 3 },
+        { "label": "You hang near the edges of the hall", "value": 2 },
+        { "label": "You slip off early; crowds like this wear you out", "value": 1 }
+      ]
+    },
+    {
+      "id": "q12",
+      "text": "It is the first night on the Hogwarts Express and your compartment fills with witches and wizards you have never met.",
+      "trait": "extraversion",
+      "reverse": false,
+      "options": [
+        { "label": "You are introducing yourself before the trolley reaches your door", "value": 5 },
+        { "label": "You happily strike up talk with whoever is nearby", "value": 4 },
+        { "label": "You will say something if there is a good reason", "value": 3 },
+        { "label": "You wait for someone to speak to you first", "value": 2 },
+        { "label": "You say nothing unless you absolutely have to", "value": 1 }
+      ]
+    },
+    {
+      "id": "q13",
+      "text": "The common room falls quiet and everyone turns to hear you recount the adventure you have just survived.",
+      "trait": "extraversion",
+      "reverse": false,
+      "options": [
+        { "label": "You love every eye on you; the floor is yours", "value": 5 },
+        { "label": "You are comfortable holding the room", "value": 4 },
+        { "label": "You manage it well enough", "value": 3 },
+        { "label": "You would rather the attention move on quickly", "value": 2 },
+        { "label": "You freeze up and wish someone else would tell it", "value": 1 }
+      ]
+    },
+    {
+      "id": "q14",
+      "text": "The whole house is crammed into the common room, all talking over each other after a long day of lessons.",
+      "trait": "extraversion",
+      "reverse": true,
+      "options": [
+        { "label": "You sit back and watch, taking it all in, saying little", "value": 5 },
+        { "label": "You hang back more often than not", "value": 4 },
+        { "label": "You jump in only when you have something to add", "value": 3 },
+        { "label": "You make yourself heard in the mix", "value": 2 },
+        { "label": "You put yourself right at the centre of it all", "value": 1 }
+      ]
+    },
+    {
+      "id": "q15",
+      "text": "You are seated at the feast beside an exchange student from a faraway wizarding school you have never met.",
+      "trait": "extraversion",
+      "reverse": true,
+      "options": [
+        { "label": "You stay quiet and let the silence sit", "value": 5 },
+        { "label": "You speak only when spoken to", "value": 4 },
+        { "label": "You offer a few careful words", "value": 3 },
+        { "label": "You chat with them easily enough", "value": 2 },
+        { "label": "You are talking like old friends within minutes", "value": 1 }
+      ]
+    },
+    {
+      "id": "q16",
+      "text": "A friend slumps down beside you, crushed after a cruel letter from home.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "options": [
+        { "label": "You feel their heartache as your own and stay with them for hours", "value": 5 },
+        { "label": "You are moved, and you offer real comfort", "value": 4 },
+        { "label": "You acknowledge it and try to move them along", "value": 3 },
+        { "label": "You notice, but feel little yourself", "value": 2 },
+        { "label": "You tell them to get over it already", "value": 1 }
+      ]
+    },
+    {
+      "id": "q17",
+      "text": "A classmate begs for your help with a mountain of homework on the one free afternoon you had all week.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "options": [
+        { "label": "You drop your plans entirely and help them all afternoon", "value": 5 },
+        { "label": "You make the time to lend a hand", "value": 4 },
+        { "label": "You swing by to help for a little while", "value": 3 },
+        { "label": "You suggest they ask someone else", "value": 2 },
+        { "label": "You wave it off; you had plans of your own", "value": 1 }
+      ]
+    },
+    {
+      "id": "q18",
+      "text": "A nervous first-year stands alone at the edge of the room, too shy to say a word to anyone.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "options": [
+        { "label": "You go out of your way to make them feel welcome", "value": 5 },
+        { "label": "You are warm and friendly toward them", "value": 4 },
+        { "label": "You are polite enough", "value": 3 },
+        { "label": "You ignore how awkward they feel", "value": 2 },
+        { "label": "You let them squirm", "value": 1 }
+      ]
+    },
+    {
+      "id": "q19",
+      "text": "A rival takes a sly, sneering dig at you in front of a crowd in the corridor, fishing for a reaction.",
+      "trait": "agreeableness",
+      "reverse": true,
+      "options": [
+        { "label": "You fire back with the most cutting line you have", "value": 5 },
+        { "label": "You return the insult sharply", "value": 4 },
+        { "label": "You give a measured comeback", "value": 3 },
+        { "label": "You let it slide without a word", "value": 2 },
+        { "label": "You answer the sneer with plain kindness", "value": 1 }
+      ]
+    },
+    {
+      "id": "q20",
+      "text": "You arrive at a gathering of wizards full of unfamiliar faces and names.",
+      "trait": "agreeableness",
+      "reverse": true,
+      "options": [
+        { "label": "Other people's lives do not interest you in the least", "value": 5 },
+        { "label": "You have little curiosity about any of them", "value": 4 },
+        { "label": "You will listen if it happens to involve you", "value": 3 },
+        { "label": "You are fairly curious about the people here", "value": 2 },
+        { "label": "You want to know everyone's whole story before the night is out", "value": 1 }
+      ]
+    },
+    {
+      "id": "q21",
+      "text": "Two disasters strike at once: a spell has gone wrong in your hands and a professor is bearing down on you.",
+      "trait": "neuroticism",
+      "reverse": false,
+      "options": [
+        { "label": "Your nerves fray on the spot; the pressure undoes you", "value": 5 },
+        { "label": "You feel the strain of it hard", "value": 4 },
+        { "label": "You are rattled, but still moving", "value": 3 },
+        { "label": "You stay fairly steady through it", "value": 2 },
+        { "label": "Pressure like this barely touches you", "value": 1 }
+      ]
+    },
+    {
+      "id": "q22",
+      "text": "It is the night before a daunting trial whose outcome you cannot be sure of.",
+      "trait": "neuroticism",
+      "reverse": false,
+      "options": [
+        { "label": "You lie awake running through every way it could go wrong", "value": 5 },
+        { "label": "You worry over it well into the night", "value": 4 },
+        { "label": "It crosses your mind, then you fall asleep", "value": 3 },
+        { "label": "You give it little thought", "value": 2 },
+        { "label": "You sleep just fine; worrying changes nothing", "value": 1 }
+      ]
+    },
+    {
+      "id": "q23",
+      "text": "One of those days arrives with a small triumph and a small catastrophe around every corner.",
+      "trait": "neuroticism",
+      "reverse": false,
+      "options": [
+        { "label": "Your mood swings from giddy to crushed and back again", "value": 5 },
+        { "label": "Your mood shifts often through the day", "value": 4 },
+        { "label": "You have your ups and downs", "value": 3 },
+        { "label": "You stay mostly even", "value": 2 },
+        { "label": "Your mood holds steady from morning to night", "value": 1 }
+      ]
+    },
+    {
+      "id": "q24",
+      "text": "You go about the ordinary grind of school life, the daily pile of lessons and little demands.",
+      "trait": "neuroticism",
+      "reverse": true,
+      "options": [
+        { "label": "You are at ease most days, whatever comes", "value": 5 },
+        { "label": "You are generally relaxed", "value": 4 },
+        { "label": "Calm on some days, tense on others", "value": 3 },
+        { "label": "You are often on edge", "value": 2 },
+        { "label": "You are rarely relaxed at all", "value": 1 }
+      ]
+    },
+    {
+      "id": "q25",
+      "text": "A long, grey stretch of term settles in, the kind of slump where nothing much goes right.",
+      "trait": "neuroticism",
+      "reverse": true,
+      "options": [
+        { "label": "Low spirits seldom find you; you keep your humour", "value": 5 },
+        { "label": "You rarely sink into the gloom", "value": 4 },
+        { "label": "You have your darker stretches now and then", "value": 3 },
+        { "label": "The blues visit you often", "value": 2 },
+        { "label": "The gloom rarely lifts from you at all", "value": 1 }
+      ]
+    }
+  ]
+}

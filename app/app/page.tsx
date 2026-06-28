@@ -25,24 +25,40 @@ export default function Home() {
             <li key={f.id}>
               <Link
                 href={`/test/${f.id}`}
-                className="block h-full rounded-2xl border border-border bg-surface/40 p-6 transition hover:border-accent/60 hover:bg-surface"
+                className="group relative flex h-60 flex-col justify-end overflow-hidden rounded-2xl border border-border transition hover:border-accent/60"
               >
-                <h2 className="text-2xl font-semibold text-fg">
-                  {f.display_name}
-                </h2>
-                {f.tagline && (
-                  <p className="mt-1 text-sm italic text-muted">
-                    {f.tagline}
-                  </p>
+                {f.image ? (
+                  <div
+                    className="absolute inset-0 bg-cover bg-center transition duration-500 group-hover:scale-105"
+                    style={{ backgroundImage: `url(${f.image})` }}
+                    aria-hidden
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-surface" aria-hidden />
                 )}
-                {f.description && (
-                  <p className="mt-3 text-sm text-muted">
-                    {f.description}
-                  </p>
-                )}
-                <span className="mt-4 inline-block text-sm text-accent">
-                  Take the test →
-                </span>
+                {/* Scrim so card text stays legible over the art. */}
+                <div
+                  className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/55 to-black/15"
+                  aria-hidden
+                />
+                <div className="relative p-6 [text-shadow:0_1px_3px_rgb(0_0_0_/_0.7)]">
+                  <h2 className="text-2xl font-semibold text-white">
+                    {f.display_name}
+                  </h2>
+                  {f.tagline && (
+                    <p className="mt-1 text-sm italic text-white/80">
+                      {f.tagline}
+                    </p>
+                  )}
+                  {f.description && (
+                    <p className="mt-2 line-clamp-2 text-sm text-white/75">
+                      {f.description}
+                    </p>
+                  )}
+                  <span className="mt-3 inline-block text-sm font-medium text-white">
+                    Take the test →
+                  </span>
+                </div>
               </Link>
             </li>
           ))}
