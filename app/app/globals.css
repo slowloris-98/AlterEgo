@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Semantic theme tokens as RGB channels so Tailwind opacity modifiers work
+   (e.g. bg-accent/10). Default :root = the neutral "Minimal Mono" hub theme.
+   Each franchise overrides these under [data-theme="<id>"]. */
+:root {
+  color-scheme: dark;
+
+  --bg: 10 10 10;
+  --surface: 23 23 23;
+  --border: 64 64 64;
+  --fg: 250 250 250;
+  --muted: 163 163 163;
+  --accent: 237 237 237;
+  --accent-ink: 10 10 10;
+  --danger: 248 113 113;
+}
+
+/* Game of Thrones — warm Westeros palette, scoped to /test/got. */
+[data-theme="got"] {
+  --bg: 12 10 9;
+  --surface: 28 25 23;
+  --border: 68 64 60;
+  --fg: 231 224 207;
+  --muted: 168 162 158;
+  --accent: 201 162 75;
+  --accent-ink: 12 10 9;
+  --danger: 185 28 28;
+
+  background-image:
+    radial-gradient(1200px 600px at 50% -10%, rgba(201, 162, 75, 0.08), transparent),
+    radial-gradient(800px 400px at 100% 100%, rgba(185, 28, 28, 0.06), transparent);
+}
+
+body {
+  @apply bg-bg text-fg font-serif antialiased;
+  min-height: 100vh;
+}
