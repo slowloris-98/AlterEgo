@@ -34,20 +34,21 @@
     radial-gradient(800px 420px at 100% 100%, rgba(150, 28, 34, 0.07), transparent);
 }
 
-/* Friends — Monica's purple door + a warm coral pop (Central Perk couch), scoped to /test/friends. */
+/* Friends — lavender-poster purple base with a bright primary-yellow pop, scoped to /test/friends. */
 [data-theme="friends"] {
-  --bg: 14 11 18;
-  --surface: 28 22 36;
-  --border: 70 58 86;
-  --fg: 240 234 246;
-  --muted: 176 166 188;
-  --accent: 240 132 122;
-  --accent-ink: 14 11 18;
-  --danger: 214 70 86;
+  --bg: 42 26 72;
+  --surface: 56 36 92;
+  --border: 96 74 144;
+  --fg: 244 240 252;
+  --muted: 192 180 218;
+  --accent: 245 206 56;
+  --accent-ink: 36 22 60;
+  --danger: 226 64 58;
 
   background-image:
-    radial-gradient(1200px 600px at 50% -10%, rgba(139, 92, 198, 0.12), transparent),
-    radial-gradient(800px 400px at 100% 100%, rgba(240, 132, 122, 0.09), transparent);
+    radial-gradient(1200px 600px at 50% -10%, rgba(150, 110, 220, 0.16), transparent),
+    radial-gradient(820px 420px at 100% 100%, rgba(245, 206, 56, 0.08), transparent),
+    radial-gradient(680px 380px at 0% 90%, rgba(226, 64, 58, 0.05), transparent);
 }
 
 /* Harry Potter — Hogwarts night sky + Great Hall candle gold, scoped to /test/hp. */
