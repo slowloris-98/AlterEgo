@@ -1,0 +1,477 @@
+{
+  "franchise": "got",
+  "stats": {
+    "openness": {
+      "mean": 41.51,
+      "std": 28.34
+    },
+    "conscientiousness": {
+      "mean": 55.33,
+      "std": 27.21
+    },
+    "extraversion": {
+      "mean": 39.32,
+      "std": 29.9
+    },
+    "agreeableness": {
+      "mean": 46.8,
+      "std": 28.76
+    },
+    "neuroticism": {
+      "mean": 44.89,
+      "std": 28.39
+    }
+  },
+  "characters": [
+    {
+      "name": "Jon Snow",
+      "raw": {
+        "openness": 51.2,
+        "conscientiousness": 72.8,
+        "extraversion": 22.2,
+        "agreeableness": 71.0,
+        "neuroticism": 39.1
+      },
+      "z": {
+        "openness": 0.3409,
+        "conscientiousness": 0.6439,
+        "extraversion": -0.5732,
+        "agreeableness": 0.8404,
+        "neuroticism": -0.2046
+      },
+      "blurb": "Jon Snow is a dutiful, thoughtful loner who keeps his feelings carefully controlled."
+    },
+    {
+      "name": "Tyrion Lannister",
+      "raw": {
+        "openness": 100.0,
+        "conscientiousness": 42.0,
+        "extraversion": 100.0,
+        "agreeableness": 62.9,
+        "neuroticism": 46.1
+      },
+      "z": {
+        "openness": 2.0639,
+        "conscientiousness": -0.4888,
+        "extraversion": 2.0294,
+        "agreeableness": 0.5584,
+        "neuroticism": 0.0437
+      },
+      "blurb": "A brilliant, charming schemer who drinks, jokes, and reinvents himself constantly."
+    },
+    {
+      "name": "Daenerys Targaryen",
+      "raw": {
+        "openness": 63.5,
+        "conscientiousness": 61.0,
+        "extraversion": 69.7,
+        "agreeableness": 52.3,
+        "neuroticism": 54.6
+      },
+      "z": {
+        "openness": 0.7742,
+        "conscientiousness": 0.2076,
+        "extraversion": 1.0174,
+        "agreeableness": 0.1912,
+        "neuroticism": 0.3438
+      },
+      "blurb": "Daenerys is an ambitious, commanding leader who pursues grand visions with passionate intensity."
+    },
+    {
+      "name": "Arya Stark",
+      "raw": {
+        "openness": 64.0,
+        "conscientiousness": 44.8,
+        "extraversion": 38.2,
+        "agreeableness": 28.7,
+        "neuroticism": 48.1
+      },
+      "z": {
+        "openness": 0.795,
+        "conscientiousness": -0.3885,
+        "extraversion": -0.0388,
+        "agreeableness": -0.6297,
+        "neuroticism": 0.112
+      },
+      "blurb": "Arya is a fierce, independent loner who questions tradition and follows her own moral code."
+    },
+    {
+      "name": "Sansa Stark",
+      "raw": {
+        "openness": 26.9,
+        "conscientiousness": 48.5,
+        "extraversion": 12.3,
+        "agreeableness": 69.6,
+        "neuroticism": 85.6
+      },
+      "z": {
+        "openness": -0.5155,
+        "conscientiousness": -0.2495,
+        "extraversion": -0.905,
+        "agreeableness": 0.7935,
+        "neuroticism": 1.4333
+      },
+      "blurb": "Anxious, people-pleasing introvert who struggles with change and emotional turbulence."
+    },
+    {
+      "name": "Jaime Lannister",
+      "raw": {
+        "openness": 40.0,
+        "conscientiousness": 29.7,
+        "extraversion": 67.2,
+        "agreeableness": 37.9,
+        "neuroticism": 43.9
+      },
+      "z": {
+        "openness": -0.055,
+        "conscientiousness": -0.9419,
+        "extraversion": 0.9341,
+        "agreeableness": -0.3095,
+        "neuroticism": -0.0338
+      },
+      "blurb": "Charming and impulsive, Jaime pursues what he wants without much restraint or regard for others."
+    },
+    {
+      "name": "Cersei Lannister",
+      "raw": {
+        "openness": 18.1,
+        "conscientiousness": 54.2,
+        "extraversion": 58.5,
+        "agreeableness": 2.8,
+        "neuroticism": 87.4
+      },
+      "z": {
+        "openness": -0.825,
+        "conscientiousness": -0.0412,
+        "extraversion": 0.6431,
+        "agreeableness": -1.5316,
+        "neuroticism": 1.4981
+      },
+      "blurb": "Cersei is a volatile, ruthless schemer who craves power and trusts no one."
+    },
+    {
+      "name": "Eddard Stark",
+      "raw": {
+        "openness": 18.5,
+        "conscientiousness": 100.0,
+        "extraversion": 2.0,
+        "agreeableness": 69.9,
+        "neuroticism": 33.9
+      },
+      "z": {
+        "openness": -0.8112,
+        "conscientiousness": 1.6417,
+        "extraversion": -1.2465,
+        "agreeableness": 0.8046,
+        "neuroticism": -0.3889
+      },
+      "blurb": "A stoic, duty-bound loner who plays by rigid rules and keeps his emotions locked away."
+    },
+    {
+      "name": "Theon Greyjoy",
+      "raw": {
+        "openness": 11.6,
+        "conscientiousness": 11.2,
+        "extraversion": 28.7,
+        "agreeableness": 36.3,
+        "neuroticism": 100.0
+      },
+      "z": {
+        "openness": -1.0554,
+        "conscientiousness": -1.62,
+        "extraversion": -0.3545,
+        "agreeableness": -0.3647,
+        "neuroticism": 1.9412
+      },
+      "blurb": "Theon is an emotionally volatile, impulsive mess who craves attention but lacks discipline."
+    },
+    {
+      "name": "Davos Seaworth",
+      "raw": {
+        "openness": 42.6,
+        "conscientiousness": 63.9,
+        "extraversion": 43.0,
+        "agreeableness": 87.0,
+        "neuroticism": 37.7
+      },
+      "z": {
+        "openness": 0.0388,
+        "conscientiousness": 0.3139,
+        "extraversion": 0.1214,
+        "agreeableness": 1.3985,
+        "neuroticism": -0.2543
+      },
+      "blurb": "A principled, compassionate craftsman who quietly does right by everyone around him."
+    },
+    {
+      "name": "Samwell Tarly",
+      "raw": {
+        "openness": 62.2,
+        "conscientiousness": 46.2,
+        "extraversion": 19.4,
+        "agreeableness": 100.0,
+        "neuroticism": 78.5
+      },
+      "z": {
+        "openness": 0.7311,
+        "conscientiousness": -0.337,
+        "extraversion": -0.6652,
+        "agreeableness": 1.8498,
+        "neuroticism": 1.1846
+      },
+      "blurb": "Sam is an anxious, deeply kind introvert who overthinks everything but never stops caring."
+    },
+    {
+      "name": "Brienne of Tarth",
+      "raw": {
+        "openness": 6.6,
+        "conscientiousness": 96.0,
+        "extraversion": 0.7,
+        "agreeableness": 67.2,
+        "neuroticism": 31.6
+      },
+      "z": {
+        "openness": -1.2318,
+        "conscientiousness": 1.4965,
+        "extraversion": -1.2913,
+        "agreeableness": 0.71,
+        "neuroticism": -0.4664
+      },
+      "blurb": "A grimly determined loner obsessed with honor and duty above all else."
+    },
+    {
+      "name": "Stannis Baratheon",
+      "raw": {
+        "openness": 3.1,
+        "conscientiousness": 85.4,
+        "extraversion": 0.0,
+        "agreeableness": 12.2,
+        "neuroticism": 43.3
+      },
+      "z": {
+        "openness": -1.3546,
+        "conscientiousness": 1.1036,
+        "extraversion": -1.3151,
+        "agreeableness": -1.2038,
+        "neuroticism": -0.0553
+      },
+      "blurb": "A rigid, joyless perfectionist who demands absolute obedience and brooks no dissent whatsoever."
+    },
+    {
+      "name": "Varys",
+      "raw": {
+        "openness": 76.3,
+        "conscientiousness": 69.1,
+        "extraversion": 31.4,
+        "agreeableness": 55.0,
+        "neuroticism": 8.1
+      },
+      "z": {
+        "openness": 1.2265,
+        "conscientiousness": 0.5072,
+        "extraversion": -0.2649,
+        "agreeableness": 0.2841,
+        "neuroticism": -1.2952
+      },
+      "blurb": "A brilliant, calculated mastermind who works alone, reshaping worlds with cold precision."
+    },
+    {
+      "name": "Petyr Baelish",
+      "raw": {
+        "openness": 86.6,
+        "conscientiousness": 74.8,
+        "extraversion": 69.3,
+        "agreeableness": 16.4,
+        "neuroticism": 6.4
+      },
+      "z": {
+        "openness": 1.5917,
+        "conscientiousness": 0.717,
+        "extraversion": 1.0013,
+        "agreeableness": -1.0556,
+        "neuroticism": -1.3554
+      },
+      "blurb": "Cunning schemer who manipulates others with calculated charm and ruthless ambition."
+    },
+    {
+      "name": "Jorah Mormont",
+      "raw": {
+        "openness": 35.4,
+        "conscientiousness": 63.3,
+        "extraversion": 6.4,
+        "agreeableness": 67.9,
+        "neuroticism": 42.1
+      },
+      "z": {
+        "openness": -0.217,
+        "conscientiousness": 0.2929,
+        "extraversion": -1.1003,
+        "agreeableness": 0.7323,
+        "neuroticism": -0.0997
+      },
+      "blurb": "A dutiful, quiet man who yearns deeply but keeps his feelings locked away."
+    },
+    {
+      "name": "Bran Stark",
+      "raw": {
+        "openness": 77.5,
+        "conscientiousness": 35.0,
+        "extraversion": 0.5,
+        "agreeableness": 68.7,
+        "neuroticism": 40.0
+      },
+      "z": {
+        "openness": 1.2713,
+        "conscientiousness": -0.7457,
+        "extraversion": -1.298,
+        "agreeableness": 0.7604,
+        "neuroticism": -0.1729
+      },
+      "blurb": "A withdrawn, imaginative dreamer with good intentions but poor follow-through."
+    },
+    {
+      "name": "Catelyn Stark",
+      "raw": {
+        "openness": 20.8,
+        "conscientiousness": 67.6,
+        "extraversion": 29.3,
+        "agreeableness": 60.1,
+        "neuroticism": 83.7
+      },
+      "z": {
+        "openness": -0.7325,
+        "conscientiousness": 0.4495,
+        "extraversion": -0.3348,
+        "agreeableness": 0.4614,
+        "neuroticism": 1.3653
+      },
+      "blurb": "Anxious, duty-bound woman who worries deeply and keeps her circle small."
+    },
+    {
+      "name": "Joffrey Baratheon",
+      "raw": {
+        "openness": 0.0,
+        "conscientiousness": 0.0,
+        "extraversion": 82.0,
+        "agreeableness": 0.0,
+        "neuroticism": 84.1
+      },
+      "z": {
+        "openness": -1.4647,
+        "conscientiousness": -2.0334,
+        "extraversion": 1.4291,
+        "agreeableness": -1.6273,
+        "neuroticism": 1.3822
+      },
+      "blurb": "A volatile, impulsive tyrant who craves attention while showing zero empathy or self-control."
+    },
+    {
+      "name": "Tywin Lannister",
+      "raw": {
+        "openness": 30.3,
+        "conscientiousness": 96.3,
+        "extraversion": 30.6,
+        "agreeableness": 7.2,
+        "neuroticism": 0.0
+      },
+      "z": {
+        "openness": -0.3963,
+        "conscientiousness": 1.5042,
+        "extraversion": -0.2906,
+        "agreeableness": -1.3776,
+        "neuroticism": -1.5812
+      },
+      "blurb": "A ruthless, calculated tactician who shows no mercy and feels no guilt."
+    },
+    {
+      "name": "Sandor Clegane",
+      "raw": {
+        "openness": 1.0,
+        "conscientiousness": 19.3,
+        "extraversion": 18.1,
+        "agreeableness": 12.7,
+        "neuroticism": 48.1
+      },
+      "z": {
+        "openness": -1.428,
+        "conscientiousness": -1.3256,
+        "extraversion": -0.711,
+        "agreeableness": -1.1843,
+        "neuroticism": 0.1127
+      },
+      "blurb": "A violent, bitter loner who scorns subtlety and barely controls his rage."
+    },
+    {
+      "name": "Melisandre",
+      "raw": {
+        "openness": 53.0,
+        "conscientiousness": 61.3,
+        "extraversion": 44.1,
+        "agreeableness": 15.7,
+        "neuroticism": 18.0
+      },
+      "z": {
+        "openness": 0.4058,
+        "conscientiousness": 0.2201,
+        "extraversion": 0.1599,
+        "agreeableness": -1.081,
+        "neuroticism": -0.9482
+      },
+      "blurb": "Melisandre is a methodical, manipulative schemer who prioritizes her agenda over others' welfare."
+    },
+    {
+      "name": "Robb Stark",
+      "raw": {
+        "openness": 40.6,
+        "conscientiousness": 65.8,
+        "extraversion": 46.0,
+        "agreeableness": 65.0,
+        "neuroticism": 40.7
+      },
+      "z": {
+        "openness": -0.0303,
+        "conscientiousness": 0.3859,
+        "extraversion": 0.2221,
+        "agreeableness": 0.6335,
+        "neuroticism": -0.149
+      },
+      "blurb": "Robb is a dutiful, principled leader who plays by the rules but lacks imagination."
+    },
+    {
+      "name": "Margaery Tyrell",
+      "raw": {
+        "openness": 70.0,
+        "conscientiousness": 67.2,
+        "extraversion": 75.4,
+        "agreeableness": 74.6,
+        "neuroticism": 20.9
+      },
+      "z": {
+        "openness": 1.0067,
+        "conscientiousness": 0.4366,
+        "extraversion": 1.208,
+        "agreeableness": 0.9677,
+        "neuroticism": -0.8433
+      },
+      "blurb": "Margaery is a charming, ambitious strategist who wins people over with grace and calculated warmth."
+    },
+    {
+      "name": "Bronn",
+      "raw": {
+        "openness": 37.8,
+        "conscientiousness": 7.8,
+        "extraversion": 87.9,
+        "agreeableness": 29.0,
+        "neuroticism": 0.5
+      },
+      "z": {
+        "openness": -0.1299,
+        "conscientiousness": -1.7453,
+        "extraversion": 1.6241,
+        "agreeableness": -0.6182,
+        "neuroticism": -1.5653
+      },
+      "blurb": "Bronn is a charismatic, ruthless mercenary who chases gold without rules or regrets."
+    }
+  ]
+}

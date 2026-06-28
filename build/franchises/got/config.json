@@ -1,0 +1,36 @@
+{
+  "id": "got",
+  "display_name": "Game of Thrones",
+  "source": {
+    "type": "github_repo",
+    "description": "TV show episode scripts, all 8 seasons",
+    "ref": "shekharkoirala/Game_of_Thrones (Data/season*/e*.txt)"
+  },
+  "characters": [
+    { "index": 0,  "name": "Jon Snow" },
+    { "index": 1,  "name": "Tyrion Lannister" },
+    { "index": 2,  "name": "Daenerys Targaryen" },
+    { "index": 3,  "name": "Arya Stark" },
+    { "index": 4,  "name": "Sansa Stark" },
+    { "index": 5,  "name": "Jaime Lannister" },
+    { "index": 6,  "name": "Cersei Lannister" },
+    { "index": 7,  "name": "Eddard Stark" },
+    { "index": 8,  "name": "Theon Greyjoy" },
+    { "index": 9,  "name": "Davos Seaworth" },
+    { "index": 10, "name": "Samwell Tarly" },
+    { "index": 11, "name": "Brienne of Tarth" },
+    { "index": 12, "name": "Stannis Baratheon" },
+    { "index": 13, "name": "Varys" },
+    { "index": 14, "name": "Petyr Baelish" },
+    { "index": 15, "name": "Jorah Mormont" },
+    { "index": 16, "name": "Bran Stark" },
+    { "index": 17, "name": "Catelyn Stark" },
+    { "index": 18, "name": "Joffrey Baratheon" },
+    { "index": 19, "name": "Tywin Lannister" },
+    { "index": 20, "name": "Sandor Clegane" },
+    { "index": 21, "name": "Melisandre" },
+    { "index": 22, "name": "Robb Stark" },
+    { "index": 23, "name": "Margaery Tyrell" },
+    { "index": 24, "name": "Bronn" }
+  ]
+}

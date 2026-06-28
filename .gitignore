@@ -1,0 +1,27 @@
+# Book source files — never commit copyrighted text
+build/franchises/*/books/
+
+# Pipeline state — large, reproducible, local only
+build/franchises/*/state/
+
+# Secrets
+**/.env
+**/.env.local
+**/.env*.local
+build/.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Node
+node_modules/
+.next/
+app/.next/
+
+# OS
+.DS_Store
+Thumbs.db

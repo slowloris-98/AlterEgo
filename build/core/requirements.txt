@@ -1,0 +1,9 @@
+anthropic>=0.40.0
+numpy>=1.26.0
+python-dotenv>=1.0.0
+jsonlines>=4.0.0
+requests>=2.31.0
+
+# Only needed for the legacy pairwise + Bradley-Terry path (fit_scores.py).
+# The default pipeline uses aggregate_scores.py and does not require it.
+choix>=0.4.1
