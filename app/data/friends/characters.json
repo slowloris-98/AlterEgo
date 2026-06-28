@@ -1,0 +1,225 @@
+{
+  "franchise": "friends",
+  "stats": {
+    "openness": {
+      "mean": 36.21,
+      "std": 25.6
+    },
+    "conscientiousness": {
+      "mean": 51.15,
+      "std": 26.17
+    },
+    "extraversion": {
+      "mean": 54.79,
+      "std": 30.58
+    },
+    "agreeableness": {
+      "mean": 52.34,
+      "std": 34.11
+    },
+    "neuroticism": {
+      "mean": 53.4,
+      "std": 37.43
+    }
+  },
+  "characters": [
+    {
+      "name": "Ross Geller",
+      "raw": {
+        "openness": 34.7,
+        "conscientiousness": 66.9,
+        "extraversion": 46.4,
+        "agreeableness": 22.9,
+        "neuroticism": 100.0
+      },
+      "z": {
+        "openness": -0.059,
+        "conscientiousness": 0.603,
+        "extraversion": -0.2744,
+        "agreeableness": -0.8634,
+        "neuroticism": 1.245
+      },
+      "blurb": "Anxious, argumentative perfectionist who sweats the details but rarely changes his mind."
+    },
+    {
+      "name": "Rachel Green",
+      "raw": {
+        "openness": 46.0,
+        "conscientiousness": 42.8,
+        "extraversion": 64.4,
+        "agreeableness": 49.0,
+        "neuroticism": 91.5
+      },
+      "z": {
+        "openness": 0.3844,
+        "conscientiousness": -0.3179,
+        "extraversion": 0.3146,
+        "agreeableness": -0.0973,
+        "neuroticism": 1.0179
+      },
+      "blurb": "Rachel is a dramatic, emotional social butterfly who's anxious and somewhat self-absorbed."
+    },
+    {
+      "name": "Monica Geller",
+      "raw": {
+        "openness": 25.5,
+        "conscientiousness": 100.0,
+        "extraversion": 63.5,
+        "agreeableness": 39.5,
+        "neuroticism": 95.9
+      },
+      "z": {
+        "openness": -0.418,
+        "conscientiousness": 1.8666,
+        "extraversion": 0.2832,
+        "agreeableness": -0.3761,
+        "neuroticism": 1.1344
+      },
+      "blurb": "Monica's an anxious perfectionist who obsesses over control and cleanliness above all else."
+    },
+    {
+      "name": "Chandler Bing",
+      "raw": {
+        "openness": 41.3,
+        "conscientiousness": 44.7,
+        "extraversion": 44.8,
+        "agreeableness": 39.8,
+        "neuroticism": 84.0
+      },
+      "z": {
+        "openness": 0.1996,
+        "conscientiousness": -0.2461,
+        "extraversion": -0.3267,
+        "agreeableness": -0.3673,
+        "neuroticism": 0.8189
+      },
+      "blurb": "A witty, anxious guy who masks deep insecurity with humor and sarcasm."
+    },
+    {
+      "name": "Joey Tribbiani",
+      "raw": {
+        "openness": 15.7,
+        "conscientiousness": 0.0,
+        "extraversion": 100.0,
+        "agreeableness": 90.9,
+        "neuroticism": 17.8
+      },
+      "z": {
+        "openness": -0.8004,
+        "conscientiousness": -1.9545,
+        "extraversion": 1.4784,
+        "agreeableness": 1.1316,
+        "neuroticism": -0.9522
+      },
+      "blurb": "Joey's a charming, easygoing party guy who'd rather wing it than plan ahead."
+    },
+    {
+      "name": "Phoebe Buffay",
+      "raw": {
+        "openness": 100.0,
+        "conscientiousness": 20.2,
+        "extraversion": 83.1,
+        "agreeableness": 92.5,
+        "neuroticism": 40.1
+      },
+      "z": {
+        "openness": 2.4918,
+        "conscientiousness": -1.1834,
+        "extraversion": 0.9271,
+        "agreeableness": 1.1771,
+        "neuroticism": -0.3564
+      },
+      "blurb": "Phoebe is a chaotic, imaginative, lovable free spirit who marches to her own drum."
+    },
+    {
+      "name": "Gunther",
+      "raw": {
+        "openness": 0.0,
+        "conscientiousness": 53.4,
+        "extraversion": 0.0,
+        "agreeableness": 0.0,
+        "neuroticism": 34.0
+      },
+      "z": {
+        "openness": -1.4145,
+        "conscientiousness": 0.0856,
+        "extraversion": -1.7917,
+        "agreeableness": -1.5344,
+        "neuroticism": -0.5178
+      },
+      "blurb": "Gunther is a solitary, rigid coffee shop manager consumed by unrequited obsession."
+    },
+    {
+      "name": "Janice Litman",
+      "raw": {
+        "openness": 16.0,
+        "conscientiousness": 46.0,
+        "extraversion": 98.1,
+        "agreeableness": 39.9,
+        "neuroticism": 52.6
+      },
+      "z": {
+        "openness": -0.7883,
+        "conscientiousness": -0.1968,
+        "extraversion": 1.416,
+        "agreeableness": -0.3638,
+        "neuroticism": -0.0214
+      },
+      "blurb": "Janice is an outgoing, brash loudmouth with little patience for others' feelings."
+    },
+    {
+      "name": "Richard Burke",
+      "raw": {
+        "openness": 38.6,
+        "conscientiousness": 66.9,
+        "extraversion": 32.3,
+        "agreeableness": 100.0,
+        "neuroticism": 0.0
+      },
+      "z": {
+        "openness": 0.0918,
+        "conscientiousness": 0.6003,
+        "extraversion": -0.7345,
+        "agreeableness": 1.3972,
+        "neuroticism": -1.4267
+      },
+      "blurb": "Richard is unfailingly kind and reliable, if somewhat reserved and conventional."
+    },
+    {
+      "name": "Mike Hannigan",
+      "raw": {
+        "openness": 46.0,
+        "conscientiousness": 55.5,
+        "extraversion": 33.8,
+        "agreeableness": 83.4,
+        "neuroticism": 1.6
+      },
+      "z": {
+        "openness": 0.3844,
+        "conscientiousness": 0.1647,
+        "extraversion": -0.688,
+        "agreeableness": 0.9112,
+        "neuroticism": -1.3853
+      },
+      "blurb": "Mike is a genuinely kind guy who keeps things simple and doesn't sweat the small stuff."
+    },
+    {
+      "name": "Emily Waltham",
+      "raw": {
+        "openness": 34.4,
+        "conscientiousness": 66.2,
+        "extraversion": 36.3,
+        "agreeableness": 17.7,
+        "neuroticism": 70.0
+      },
+      "z": {
+        "openness": -0.0703,
+        "conscientiousness": 0.5766,
+        "extraversion": -0.6043,
+        "agreeableness": -1.0152,
+        "neuroticism": 0.4448
+      },
+      "blurb": "Emily is anxious and stubborn, organized but withdrawn and combative in relationships."
+    }
+  ]
+}

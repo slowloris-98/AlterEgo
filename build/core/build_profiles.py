@@ -25,13 +25,13 @@ TRAITS = ["openness", "conscientiousness", "extraversion", "agreeableness", "neu
 BLURB_MODEL = os.getenv("BLURB_MODEL", "claude-haiku-4-5-20251001")
 
 
-def get_blurb(client: anthropic.Anthropic, name: str, raw: dict[str, float]) -> str:
+def get_blurb(client: anthropic.Anthropic, name: str, raw: dict[str, float], franchise_name: str) -> str:
     """Ask Claude for a one-line personality blurb based on the character's OCEAN scores."""
     score_lines = "\n".join(
         f"  {trait.capitalize()}: {raw[trait]:.0f}/100"
         for trait in TRAITS
     )
-    prompt = f"""Given these Big Five personality scores for {name} (from A Song of Ice and Fire),
+    prompt = f"""Given these Big Five personality scores for {name} (from {franchise_name}),
 write a single punchy sentence (max 15 words) describing their personality in plain English.
 Do not mention the scores or trait names — just describe the person.
 
@@ -83,6 +83,7 @@ def run(franchise_dir: Path) -> None:
 
     # Generate blurbs
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+    franchise_name = config.get("display_name", config["id"])
 
     out_characters = []
     for c in characters_raw:
@@ -91,7 +92,7 @@ def run(franchise_dir: Path) -> None:
             for trait in TRAITS
         }
         print(f"  Blurb: {c['name']}...")
-        blurb = get_blurb(client, c["name"], c["raw"])
+        blurb = get_blurb(client, c["name"], c["raw"], franchise_name)
 
         out_characters.append({
             "name":  c["name"],

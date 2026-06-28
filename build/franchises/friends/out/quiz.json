@@ -1,0 +1,330 @@
+{
+  "franchise": "friends",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "The gang is bored on the couch at Central Perk and someone asks what you should all do tonight.",
+      "trait": "openness",
+      "reverse": false,
+      "options": [
+        { "label": "You rattle off half a dozen wild plans before the coffee even arrives", "value": 5 },
+        { "label": "You toss out a couple of fun ideas worth trying", "value": 4 },
+        { "label": "You have one idea, and you share it", "value": 3 },
+        { "label": "You wait to hear what everyone else wants to do", "value": 2 },
+        { "label": "You have nothing; you would rather just go along with the plan", "value": 1 }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "You walk into an empty apartment that just came up for rent and are asked what could be done with it.",
+      "trait": "openness",
+      "reverse": false,
+      "options": [
+        { "label": "You picture the whole place transformed, down to the throw pillows", "value": 5 },
+        { "label": "You imagine it clearly enough to describe it", "value": 4 },
+        { "label": "You see roughly what it might become", "value": 3 },
+        { "label": "You struggle to picture much beyond the bare walls", "value": 2 },
+        { "label": "You see only an empty room; imagining more is a waste of time", "value": 1 }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "Someone is explaining the absurdly tangled web of who is dating, dumping, and avoiding whom.",
+      "trait": "openness",
+      "reverse": false,
+      "options": [
+        { "label": "You have the whole mess figured out before they finish", "value": 5 },
+        { "label": "You follow it easily", "value": 4 },
+        { "label": "You get there after a moment's thought", "value": 3 },
+        { "label": "You need it explained a second time", "value": 2 },
+        { "label": "You give up; that kind of thing just loses you", "value": 1 }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "Late at night the conversation drifts into big questions about life, fate, and the meaning of it all.",
+      "trait": "openness",
+      "reverse": true,
+      "options": [
+        { "label": "That kind of talk bores you; you would rather order pizza", "value": 5 },
+        { "label": "You have little patience for it, but you sit through it", "value": 4 },
+        { "label": "You will join in if it turns to something practical", "value": 3 },
+        { "label": "You find the ideas worth chewing on", "value": 2 },
+        { "label": "You love a good deep conversation for its own sake", "value": 1 }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "A friend is stuck and needs a clever, made-up excuse to get out of an awkward date.",
+      "trait": "openness",
+      "reverse": true,
+      "options": [
+        { "label": "Nothing comes to you; making things up just is not in you", "value": 5 },
+        { "label": "You manage little; that kind of inventiveness escapes you", "value": 4 },
+        { "label": "You can force out one plain, obvious excuse", "value": 3 },
+        { "label": "A decent cover story takes shape after some thought", "value": 2 },
+        { "label": "Three ridiculous excuses spring to mind at once", "value": 1 }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "You are hosting Thanksgiving dinner for the whole group this year.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "options": [
+        { "label": "Every dish timed to the minute, a backup plan for each one", "value": 5 },
+        { "label": "A solid menu planned and the schedule set", "value": 4 },
+        { "label": "A rough plan, good enough to start cooking", "value": 3 },
+        { "label": "You will figure it out once people show up", "value": 2 },
+        { "label": "You had not really thought about it", "value": 1 }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "You are signing a new apartment lease the landlord just slid across the table.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "options": [
+        { "label": "You catch every clause and the fine print buried at the bottom", "value": 5 },
+        { "label": "You read it closely and flag the key terms", "value": 4 },
+        { "label": "You skim it for the main points", "value": 3 },
+        { "label": "You trust that it is probably fine", "value": 2 },
+        { "label": "You just sign where they point", "value": 1 }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "You share an apartment, and the state of the place is largely up to you.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "options": [
+        { "label": "Everything labeled and in its place, with a secret closet kept just so", "value": 5 },
+        { "label": "You keep it mostly tidy and the chores done", "value": 4 },
+        { "label": "Neat where it matters, messy everywhere else", "value": 3 },
+        { "label": "You let it slide and deal with the mess later", "value": 2 },
+        { "label": "Chaos suits you fine; cleaning up is overrated", "value": 1 }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "You volunteer to handle the group's money for a weekend trip away.",
+      "trait": "conscientiousness",
+      "reverse": true,
+      "options": [
+        { "label": "Receipts lost and the math all wrong; it is a disaster by Sunday", "value": 5 },
+        { "label": "Things slip and get muddled more often than not", "value": 4 },
+        { "label": "A few mistakes creep in, nothing serious", "value": 3 },
+        { "label": "It mostly stays in order", "value": 2 },
+        { "label": "You keep it flawless, every dollar accounted for", "value": 1 }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "It is your turn to do the dull errand nobody wants, like the laundry or the grocery run.",
+      "trait": "conscientiousness",
+      "reverse": true,
+      "options": [
+        { "label": "You talk someone else into doing it; it can wait", "value": 5 },
+        { "label": "You put it off whenever you can", "value": 4 },
+        { "label": "You do it, grumbling and late", "value": 3 },
+        { "label": "You get it done without complaint", "value": 2 },
+        { "label": "Your turn is your turn; you would never pass it off", "value": 1 }
+      ]
+    },
+    {
+      "id": "q11",
+      "text": "It is a packed party and the music is loud and the place is full of people.",
+      "trait": "extraversion",
+      "reverse": false,
+      "options": [
+        { "label": "You are the center of it, leading the toasts and the dancing", "value": 5 },
+        { "label": "You are lively and pull people in around you", "value": 4 },
+        { "label": "You enjoy yourself with a few good friends", "value": 3 },
+        { "label": "You hang near the edges of the room", "value": 2 },
+        { "label": "You slip out early; crowds like this wear you out", "value": 1 }
+      ]
+    },
+    {
+      "id": "q12",
+      "text": "You walk into a party where you don't know a single person in the room.",
+      "trait": "extraversion",
+      "reverse": false,
+      "options": [
+        { "label": "You are introducing yourself before your coat is even off", "value": 5 },
+        { "label": "You happily strike up talk with whoever is nearby", "value": 4 },
+        { "label": "You will say something if there is a good reason", "value": 3 },
+        { "label": "You wait for someone to come to you", "value": 2 },
+        { "label": "You say nothing unless you absolutely have to", "value": 1 }
+      ]
+    },
+    {
+      "id": "q13",
+      "text": "The room quiets and everyone turns to hear the big story you are about to tell.",
+      "trait": "extraversion",
+      "reverse": false,
+      "options": [
+        { "label": "You love every eye on you; the floor is yours", "value": 5 },
+        { "label": "You are comfortable holding the room", "value": 4 },
+        { "label": "You manage it well enough", "value": 3 },
+        { "label": "You would rather the attention move on quickly", "value": 2 },
+        { "label": "You freeze up and wish someone else would talk", "value": 1 }
+      ]
+    },
+    {
+      "id": "q14",
+      "text": "The whole group is hanging out, talking over each other in the crowded apartment.",
+      "trait": "extraversion",
+      "reverse": true,
+      "options": [
+        { "label": "You sit back and watch, taking it all in, saying little", "value": 5 },
+        { "label": "You hang back more often than not", "value": 4 },
+        { "label": "You jump in only when you have something to add", "value": 3 },
+        { "label": "You make yourself heard in the mix", "value": 2 },
+        { "label": "You put yourself right at the center of it all", "value": 1 }
+      ]
+    },
+    {
+      "id": "q15",
+      "text": "You are seated next to a friend's date you have never met before.",
+      "trait": "extraversion",
+      "reverse": true,
+      "options": [
+        { "label": "You stay quiet and let the silence sit", "value": 5 },
+        { "label": "You speak only when spoken to", "value": 4 },
+        { "label": "You offer a few careful words", "value": 3 },
+        { "label": "You chat with them easily enough", "value": 2 },
+        { "label": "You are talking like old friends within minutes", "value": 1 }
+      ]
+    },
+    {
+      "id": "q16",
+      "text": "A friend breaks down on the couch, devastated by a brutal breakup.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "options": [
+        { "label": "You feel their heartbreak as your own and sit with them for hours", "value": 5 },
+        { "label": "You are moved, and you offer real comfort", "value": 4 },
+        { "label": "You acknowledge it and try to move them along", "value": 3 },
+        { "label": "You notice, but feel little yourself", "value": 2 },
+        { "label": "You tell them to get over it already", "value": 1 }
+      ]
+    },
+    {
+      "id": "q17",
+      "text": "A friend begs for your help moving apartments on the one free day you had all month.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "options": [
+        { "label": "You drop your plans entirely and show up to help all day", "value": 5 },
+        { "label": "You make the time to lend a hand", "value": 4 },
+        { "label": "You swing by for a little while", "value": 3 },
+        { "label": "You suggest they ask someone else", "value": 2 },
+        { "label": "You wave it off; you had plans of your own", "value": 1 }
+      ]
+    },
+    {
+      "id": "q18",
+      "text": "Someone new and nervous joins the group and sits stiffly, not saying a word.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "options": [
+        { "label": "You go out of your way to make them feel welcome", "value": 5 },
+        { "label": "You are warm and friendly toward them", "value": 4 },
+        { "label": "You are polite enough", "value": 3 },
+        { "label": "You ignore how awkward they feel", "value": 2 },
+        { "label": "You let them squirm", "value": 1 }
+      ]
+    },
+    {
+      "id": "q19",
+      "text": "Someone takes a sly little dig at you in front of the whole group, fishing for a reaction.",
+      "trait": "agreeableness",
+      "reverse": true,
+      "options": [
+        { "label": "You fire back with the most cutting line you have", "value": 5 },
+        { "label": "You return the insult sharply", "value": 4 },
+        { "label": "You give a measured comeback", "value": 3 },
+        { "label": "You let it slide without a word", "value": 2 },
+        { "label": "You answer the dig with plain kindness", "value": 1 }
+      ]
+    },
+    {
+      "id": "q20",
+      "text": "You are at a gathering full of new faces and unfamiliar names.",
+      "trait": "agreeableness",
+      "reverse": true,
+      "options": [
+        { "label": "Other people's lives do not interest you in the least", "value": 5 },
+        { "label": "You have little curiosity about any of them", "value": 4 },
+        { "label": "You will listen if it happens to involve you", "value": 3 },
+        { "label": "You are fairly curious about the people here", "value": 2 },
+        { "label": "You want to know everyone's whole story before the night is out", "value": 1 }
+      ]
+    },
+    {
+      "id": "q21",
+      "text": "Two crises hit at once: your date is at the door and dinner is burning on the stove.",
+      "trait": "neuroticism",
+      "reverse": false,
+      "options": [
+        { "label": "Your nerves fray on the spot; the pressure undoes you", "value": 5 },
+        { "label": "You feel the strain of it hard", "value": 4 },
+        { "label": "You are rattled, but still moving", "value": 3 },
+        { "label": "You stay fairly steady through it", "value": 2 },
+        { "label": "Pressure like this barely touches you", "value": 1 }
+      ]
+    },
+    {
+      "id": "q22",
+      "text": "It is the night before a big day whose outcome you cannot be sure of.",
+      "trait": "neuroticism",
+      "reverse": false,
+      "options": [
+        { "label": "You lie awake running through every way it could go wrong", "value": 5 },
+        { "label": "You worry over it well into the night", "value": 4 },
+        { "label": "It crosses your mind, then you fall asleep", "value": 3 },
+        { "label": "You give it little thought", "value": 2 },
+        { "label": "You sleep just fine; worrying changes nothing", "value": 1 }
+      ]
+    },
+    {
+      "id": "q23",
+      "text": "One of those days arrives with a small win and a small disaster around every corner.",
+      "trait": "neuroticism",
+      "reverse": false,
+      "options": [
+        { "label": "Your mood swings from giddy to crushed and back again", "value": 5 },
+        { "label": "Your mood shifts often through the day", "value": 4 },
+        { "label": "You have your ups and downs", "value": 3 },
+        { "label": "You stay mostly even", "value": 2 },
+        { "label": "Your mood holds steady from morning to night", "value": 1 }
+      ]
+    },
+    {
+      "id": "q24",
+      "text": "You go about the ordinary hassles of life, the daily pile of little demands.",
+      "trait": "neuroticism",
+      "reverse": true,
+      "options": [
+        { "label": "You are at ease most days, whatever comes", "value": 5 },
+        { "label": "You are generally relaxed", "value": 4 },
+        { "label": "Calm on some days, tense on others", "value": 3 },
+        { "label": "You are often on edge", "value": 2 },
+        { "label": "You are rarely relaxed at all", "value": 1 }
+      ]
+    },
+    {
+      "id": "q25",
+      "text": "A long, gray stretch settles in, the kind of slump where nothing much goes right.",
+      "trait": "neuroticism",
+      "reverse": true,
+      "options": [
+        { "label": "Low spirits seldom find you; you keep your humor", "value": 5 },
+        { "label": "You rarely sink into the gloom", "value": 4 },
+        { "label": "You have your darker stretches now and then", "value": 3 },
+        { "label": "The blues visit you often", "value": 2 },
+        { "label": "The gloom rarely lifts from you at all", "value": 1 }
+      ]
+    }
+  ]
+}

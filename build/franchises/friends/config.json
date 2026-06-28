@@ -1,0 +1,22 @@
+{
+  "id": "friends",
+  "display_name": "Friends",
+  "source": {
+    "type": "github_repo",
+    "description": "Full episode transcripts with scene directions, all 10 seasons",
+    "ref": "fangj/friends (season/SSEE.html)"
+  },
+  "characters": [
+    { "index": 0,  "name": "Ross Geller" },
+    { "index": 1,  "name": "Rachel Green" },
+    { "index": 2,  "name": "Monica Geller" },
+    { "index": 3,  "name": "Chandler Bing" },
+    { "index": 4,  "name": "Joey Tribbiani" },
+    { "index": 5,  "name": "Phoebe Buffay" },
+    { "index": 6,  "name": "Gunther" },
+    { "index": 7,  "name": "Janice Litman" },
+    { "index": 8,  "name": "Richard Burke" },
+    { "index": 9,  "name": "Mike Hannigan" },
+    { "index": 10, "name": "Emily Waltham" }
+  ]
+}

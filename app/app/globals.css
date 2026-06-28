@@ -34,6 +34,22 @@
     radial-gradient(800px 400px at 100% 100%, rgba(185, 28, 28, 0.06), transparent);
 }
 
+/* Friends — Monica's purple door + Central Perk warmth, scoped to /test/friends. */
+[data-theme="friends"] {
+  --bg: 14 11 18;
+  --surface: 28 22 36;
+  --border: 70 58 86;
+  --fg: 240 234 246;
+  --muted: 176 166 188;
+  --accent: 226 168 74;
+  --accent-ink: 14 11 18;
+  --danger: 220 80 80;
+
+  background-image:
+    radial-gradient(1200px 600px at 50% -10%, rgba(139, 92, 198, 0.12), transparent),
+    radial-gradient(800px 400px at 100% 100%, rgba(226, 168, 74, 0.07), transparent);
+}
+
 body {
   @apply bg-bg text-fg font-serif antialiased;
   min-height: 100vh;
