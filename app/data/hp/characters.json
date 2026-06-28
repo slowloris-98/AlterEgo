@@ -1,0 +1,297 @@
+{
+  "franchise": "hp",
+  "stats": {
+    "openness": {
+      "mean": 42.12,
+      "std": 30.36
+    },
+    "conscientiousness": {
+      "mean": 41.91,
+      "std": 34.8
+    },
+    "extraversion": {
+      "mean": 53.95,
+      "std": 28.52
+    },
+    "agreeableness": {
+      "mean": 59.26,
+      "std": 37.26
+    },
+    "neuroticism": {
+      "mean": 48.65,
+      "std": 27.1
+    }
+  },
+  "characters": [
+    {
+      "name": "Harry Potter",
+      "raw": {
+        "openness": 65.7,
+        "conscientiousness": 36.2,
+        "extraversion": 48.5,
+        "agreeableness": 69.6,
+        "neuroticism": 73.7
+      },
+      "z": {
+        "openness": 0.7773,
+        "conscientiousness": -0.1641,
+        "extraversion": -0.1928,
+        "agreeableness": 0.277,
+        "neuroticism": 0.924
+      },
+      "blurb": "Brave and warm-hearted, but restless and quick to anxiety under pressure."
+    },
+    {
+      "name": "Ron Weasley",
+      "raw": {
+        "openness": 24.9,
+        "conscientiousness": 0.2,
+        "extraversion": 83.3,
+        "agreeableness": 70.7,
+        "neuroticism": 57.5
+      },
+      "z": {
+        "openness": -0.5672,
+        "conscientiousness": -1.1997,
+        "extraversion": 1.0277,
+        "agreeableness": 0.3062,
+        "neuroticism": 0.3273
+      },
+      "blurb": "Loyal, outgoing, and easygoing, though disorganised and prone to insecurity."
+    },
+    {
+      "name": "Hermione Granger",
+      "raw": {
+        "openness": 70.5,
+        "conscientiousness": 100.0,
+        "extraversion": 50.9,
+        "agreeableness": 72.5,
+        "neuroticism": 59.8
+      },
+      "z": {
+        "openness": 0.9354,
+        "conscientiousness": 1.6693,
+        "extraversion": -0.1055,
+        "agreeableness": 0.3551,
+        "neuroticism": 0.41
+      },
+      "blurb": "Brilliant, meticulous, and caring, with a worrier's edge beneath the discipline."
+    },
+    {
+      "name": "Albus Dumbledore",
+      "raw": {
+        "openness": 92.4,
+        "conscientiousness": 84.3,
+        "extraversion": 75.6,
+        "agreeableness": 91.6,
+        "neuroticism": 0.0
+      },
+      "z": {
+        "openness": 1.6561,
+        "conscientiousness": 1.2184,
+        "extraversion": 0.7598,
+        "agreeableness": 0.8671,
+        "neuroticism": -1.7952
+      },
+      "blurb": "Endlessly wise, kind, and unshakably calm, a curious mind at peace."
+    },
+    {
+      "name": "Severus Snape",
+      "raw": {
+        "openness": 23.4,
+        "conscientiousness": 66.0,
+        "extraversion": 10.0,
+        "agreeableness": 12.7,
+        "neuroticism": 46.3
+      },
+      "z": {
+        "openness": -0.6159,
+        "conscientiousness": 0.6914,
+        "extraversion": -1.54,
+        "agreeableness": -1.2509,
+        "neuroticism": -0.0875
+      },
+      "blurb": "Guarded, exacting, and cold, hiding everything behind a bitter, solitary front."
+    },
+    {
+      "name": "Voldemort",
+      "raw": {
+        "openness": 26.5,
+        "conscientiousness": 72.6,
+        "extraversion": 29.1,
+        "agreeableness": 0.0,
+        "neuroticism": 43.3
+      },
+      "z": {
+        "openness": -0.5158,
+        "conscientiousness": 0.8813,
+        "extraversion": -0.8713,
+        "agreeableness": -1.5904,
+        "neuroticism": -0.1963
+      },
+      "blurb": "Calculating and disciplined, utterly without warmth or mercy for anyone."
+    },
+    {
+      "name": "Rubeus Hagrid",
+      "raw": {
+        "openness": 40.0,
+        "conscientiousness": 13.8,
+        "extraversion": 84.5,
+        "agreeableness": 100.0,
+        "neuroticism": 52.4
+      },
+      "z": {
+        "openness": -0.0682,
+        "conscientiousness": -0.808,
+        "extraversion": 1.0715,
+        "agreeableness": 1.0934,
+        "neuroticism": 0.1373
+      },
+      "blurb": "Big-hearted and sociable, gentle to a fault, careless with the rules."
+    },
+    {
+      "name": "Draco Malfoy",
+      "raw": {
+        "openness": 0.6,
+        "conscientiousness": 16.2,
+        "extraversion": 75.2,
+        "agreeableness": 1.7,
+        "neuroticism": 55.1
+      },
+      "z": {
+        "openness": -1.3663,
+        "conscientiousness": -0.7399,
+        "extraversion": 0.7447,
+        "agreeableness": -1.5459,
+        "neuroticism": 0.238
+      },
+      "blurb": "Loud, spiteful, and closed-minded, sneering at anyone beneath him."
+    },
+    {
+      "name": "Minerva McGonagall",
+      "raw": {
+        "openness": 22.9,
+        "conscientiousness": 92.8,
+        "extraversion": 42.5,
+        "agreeableness": 50.6,
+        "neuroticism": 25.4
+      },
+      "z": {
+        "openness": -0.6344,
+        "conscientiousness": 1.4609,
+        "extraversion": -0.4032,
+        "agreeableness": -0.2316,
+        "neuroticism": -0.8561
+      },
+      "blurb": "Strict, dutiful, and composed, fair-minded and very hard to rattle."
+    },
+    {
+      "name": "Sirius Black",
+      "raw": {
+        "openness": 45.2,
+        "conscientiousness": 5.3,
+        "extraversion": 72.3,
+        "agreeableness": 58.8,
+        "neuroticism": 58.7
+      },
+      "z": {
+        "openness": 0.1014,
+        "conscientiousness": -1.0532,
+        "extraversion": 0.6431,
+        "agreeableness": -0.0113,
+        "neuroticism": 0.3716
+      },
+      "blurb": "Bold, impulsive, and fiercely loyal, reckless and haunted in equal measure."
+    },
+    {
+      "name": "Bellatrix Lestrange",
+      "raw": {
+        "openness": 0.0,
+        "conscientiousness": 19.4,
+        "extraversion": 100.0,
+        "agreeableness": 3.4,
+        "neuroticism": 100.0
+      },
+      "z": {
+        "openness": -1.3874,
+        "conscientiousness": -0.6477,
+        "extraversion": 1.6147,
+        "agreeableness": -1.4984,
+        "neuroticism": 1.8948
+      },
+      "blurb": "Manic, cruel, and volatile, fanatically devoted and utterly unhinged."
+    },
+    {
+      "name": "Luna Lovegood",
+      "raw": {
+        "openness": 100.0,
+        "conscientiousness": 0.0,
+        "extraversion": 52.4,
+        "agreeableness": 99.7,
+        "neuroticism": 2.1
+      },
+      "z": {
+        "openness": 1.9065,
+        "conscientiousness": -1.2043,
+        "extraversion": -0.0533,
+        "agreeableness": 1.0853,
+        "neuroticism": -1.7162
+      },
+      "blurb": "Dreamy, imaginative, and serene, kind to everyone and unbothered by anything."
+    },
+    {
+      "name": "Neville Longbottom",
+      "raw": {
+        "openness": 21.4,
+        "conscientiousness": 30.2,
+        "extraversion": 0.0,
+        "agreeableness": 91.4,
+        "neuroticism": 82.0
+      },
+      "z": {
+        "openness": -0.6821,
+        "conscientiousness": -0.3365,
+        "extraversion": -1.8917,
+        "agreeableness": 0.8629,
+        "neuroticism": 1.2314
+      },
+      "blurb": "Shy, anxious, and tender-hearted, timid now but quietly brave."
+    },
+    {
+      "name": "Ginny Weasley",
+      "raw": {
+        "openness": 35.5,
+        "conscientiousness": 27.7,
+        "extraversion": 55.1,
+        "agreeableness": 70.5,
+        "neuroticism": 45.6
+      },
+      "z": {
+        "openness": -0.2184,
+        "conscientiousness": -0.4083,
+        "extraversion": 0.0414,
+        "agreeableness": 0.3019,
+        "neuroticism": -0.1118
+      },
+      "blurb": "Spirited, warm, and sociable, steady and good-natured through it all."
+    },
+    {
+      "name": "Remus Lupin",
+      "raw": {
+        "openness": 62.7,
+        "conscientiousness": 64.2,
+        "extraversion": 29.8,
+        "agreeableness": 95.7,
+        "neuroticism": 27.8
+      },
+      "z": {
+        "openness": 0.6765,
+        "conscientiousness": 0.6414,
+        "extraversion": -0.8468,
+        "agreeableness": 0.9783,
+        "neuroticism": -0.7712
+      },
+      "blurb": "Thoughtful, gentle, and dependable, quietly wise and remarkably patient."
+    }
+  ]
+}

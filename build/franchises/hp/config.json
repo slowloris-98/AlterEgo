@@ -1,0 +1,26 @@
+{
+  "id": "hp",
+  "display_name": "Harry Potter",
+  "source": {
+    "type": "kaggle_dataset",
+    "description": "Full prose of all 7 novels as one cleaned blob (no chapter/book/sentence delimiters). Reconstructed into sentences and packed into uniform ~chapter-sized segments.",
+    "ref": "kaggle moxxis/harry-potter-lstm — Harry_Potter_all_books_preprocessed.txt (in books/, gitignored)"
+  },
+  "characters": [
+    { "index": 0,  "name": "Harry Potter" },
+    { "index": 1,  "name": "Ron Weasley" },
+    { "index": 2,  "name": "Hermione Granger" },
+    { "index": 3,  "name": "Albus Dumbledore" },
+    { "index": 4,  "name": "Severus Snape" },
+    { "index": 5,  "name": "Voldemort" },
+    { "index": 6,  "name": "Rubeus Hagrid" },
+    { "index": 7,  "name": "Draco Malfoy" },
+    { "index": 8,  "name": "Minerva McGonagall" },
+    { "index": 9,  "name": "Sirius Black" },
+    { "index": 10, "name": "Bellatrix Lestrange" },
+    { "index": 11, "name": "Luna Lovegood" },
+    { "index": 12, "name": "Neville Longbottom" },
+    { "index": 13, "name": "Ginny Weasley" },
+    { "index": 14, "name": "Remus Lupin" }
+  ]
+}
