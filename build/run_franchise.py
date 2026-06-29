@@ -7,12 +7,13 @@ Usage:
     franchise_id: must match a folder in build/franchises/ (e.g. "got")
 
     --step ingest      run only the ingest adapter (build/ingest/ingest_<id>.py)
+    --step discover    run only discover_characters (auto-fill config.json roster)
     --step score       run only score_segments
     --step aggregate   run only aggregate_scores
     --step profiles    run only build_profiles
     (default: run all steps in order)
 
-Pipeline:  ingest -> score_segments -> aggregate_scores -> build_profiles
+Pipeline:  ingest -> discover -> score_segments -> aggregate_scores -> build_profiles
 After all steps succeed, copies out/characters.json and out/quiz.json to
 ../app/data/<franchise_id>/.
 
@@ -35,6 +36,7 @@ sys.path.insert(0, str(CORE_DIR))
 import score_segments
 import aggregate_scores
 import build_profiles
+import discover_characters
 
 
 def load_ingest_adapter(franchise_id: str):
@@ -80,7 +82,7 @@ def main() -> None:
         if idx + 1 < len(args):
             step = args[idx + 1]
 
-    valid_steps = {"ingest", "score", "aggregate", "profiles"}
+    valid_steps = {"ingest", "discover", "score", "aggregate", "profiles"}
     if step and step not in valid_steps:
         print(f"ERROR: unknown step '{step}'. Choose from: {', '.join(sorted(valid_steps))}")
         sys.exit(1)
@@ -97,18 +99,23 @@ def main() -> None:
             adapter.run(franchise_dir)
         print()
 
+    if step is None or step == "discover":
+        print("--- Step 2: discover_characters ---")
+        discover_characters.run(franchise_dir)
+        print()
+
     if step is None or step == "score":
-        print("--- Step 2: score_segments ---")
+        print("--- Step 3: score_segments ---")
         score_segments.run(franchise_dir)
         print()
 
     if step is None or step == "aggregate":
-        print("--- Step 3: aggregate_scores ---")
+        print("--- Step 4: aggregate_scores ---")
         aggregate_scores.run(franchise_dir)
         print()
 
     if step is None or step == "profiles":
-        print("--- Step 4: build_profiles ---")
+        print("--- Step 5: build_profiles ---")
         build_profiles.run(franchise_dir)
         print()
 

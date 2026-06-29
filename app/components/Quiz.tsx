@@ -75,7 +75,9 @@ export default function Quiz({
   }
 
   if (result) {
-    return <ResultCard result={result} onRetake={retake} />;
+    return (
+      <ResultCard result={result} logId={result.logId} onRetake={retake} />
+    );
   }
 
   return (

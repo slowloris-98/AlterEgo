@@ -53,8 +53,9 @@ export async function POST(req: Request) {
   const matchCharacter = fr.data.characters.find((c) => c.name === match.name)!;
   const matchTraits: TraitScores = matchCharacter.raw;
 
-  // Best-effort logging; never blocks or fails the response.
-  await logSubmission({
+  // Best-effort logging; never blocks or fails the response. The row id lets
+  // the client attach later feedback (thumbs / suggestions) to this submission.
+  const logId = await logSubmission({
     franchise,
     answers,
     traitScores: raw,
@@ -69,6 +70,7 @@ export async function POST(req: Request) {
     runnersUp,
     traits: raw,
     matchTraits,
+    logId,
   };
 
   return NextResponse.json(result);

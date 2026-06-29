@@ -83,4 +83,6 @@ export interface MatchResult {
   traits: TraitScores;
   /** Matched character's raw OCEAN scores (0-100), for radar comparison. */
   matchTraits: TraitScores;
+  /** Id of the logged quiz_logs row, used to attach later feedback. */
+  logId?: string | null;
 }

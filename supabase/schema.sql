@@ -10,8 +10,14 @@ create table if not exists quiz_logs (
   match        text not null,           -- closest character
   runners_up   jsonb,                   -- [{ name, distance, similarity }, ...]
   distance     double precision,        -- distance to the closest character
-  ip_hash      text                     -- salted SHA-256 of client IP, no raw PII
+  ip_hash      text,                    -- salted SHA-256 of client IP, no raw PII
+  rating       text,                    -- 'up' | 'down', user's reaction to the match
+  feedback_text text                    -- free-text suggestions / new-series ideas
 );
+
+-- Apply to an existing table without recreating it:
+alter table quiz_logs add column if not exists rating text;
+alter table quiz_logs add column if not exists feedback_text text;
 
 create index if not exists quiz_logs_franchise_idx on quiz_logs (franchise);
 create index if not exists quiz_logs_created_at_idx on quiz_logs (created_at);

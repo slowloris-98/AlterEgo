@@ -72,3 +72,125 @@ body {
   @apply bg-bg text-fg font-serif antialiased;
   min-height: 100vh;
 }
+
+/* ---- Ambient animated theme backgrounds (ThemeBackground.tsx) ---- */
+/* Decorative, behind content, no pointer events. Particles are absolutely
+   positioned spans whose motion comes from the `ae-*` keyframes below. */
+.ae-particle {
+  position: absolute;
+  display: block;
+  border-radius: 9999px;
+  will-change: transform, opacity;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Round dot particles take a solid themed fill; SVG motifs do not. */
+.ae-snow {
+  background: rgb(var(--fg));
+}
+.ae-ash {
+  background: rgb(var(--danger));
+  box-shadow: 0 0 6px rgb(var(--danger) / 0.6);
+}
+.ae-spark {
+  background: rgb(var(--accent));
+  box-shadow: 0 0 6px rgb(var(--accent) / 0.7);
+}
+.ae-firefly {
+  background: rgb(var(--accent));
+  box-shadow: 0 0 10px 2px rgb(var(--accent) / 0.6);
+}
+/* SVG motifs: keep them un-filled and easing-eased for a gentle drift. */
+.ae-cup,
+.ae-steam {
+  border-radius: 0;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes ae-fall {
+  from {
+    transform: translateY(0) translateX(0);
+  }
+  to {
+    transform: translateY(105vh) translateX(var(--ae-drift, 0));
+  }
+}
+
+@keyframes ae-rise {
+  from {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-105vh) translateX(var(--ae-drift, 0));
+    opacity: 0;
+  }
+}
+
+@keyframes ae-float {
+  from {
+    transform: translateY(0) translateX(0) rotate(-6deg);
+  }
+  to {
+    transform: translateY(-115vh) translateX(var(--ae-drift, 0)) rotate(6deg);
+  }
+}
+
+@keyframes ae-twinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.7);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes ae-flicker {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes ae-wander {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.4;
+  }
+  25% {
+    transform: translate(var(--ae-dx, 0), calc(var(--ae-dy, 0) * -1));
+    opacity: 1;
+  }
+  50% {
+    transform: translate(calc(var(--ae-dx, 0) * -1), var(--ae-dy, 0));
+    opacity: 0.5;
+  }
+  75% {
+    transform: translate(var(--ae-dx, 0), var(--ae-dy, 0));
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.4;
+  }
+}
+
+/* Respect reduced-motion: drop the ambient layer entirely. */
+@media (prefers-reduced-motion: reduce) {
+  .ae-bg {
+    display: none;
+  }
+}
