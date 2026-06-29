@@ -11,7 +11,15 @@ import { useEffect, useMemo, useState, type CSSProperties } from "react";
  * wrapper, so each franchise tints automatically.
  */
 
-type Kind = "snow" | "ash" | "spark" | "firefly" | "cup" | "steam";
+type Kind =
+  | "snow"
+  | "ash"
+  | "spark"
+  | "firefly"
+  | "cup"
+  | "steam"
+  | "crystal"
+  | "bubble";
 
 interface Layer {
   kind: Kind;
@@ -30,6 +38,11 @@ const EFFECTS: Record<string, Layer[]> = {
   friends: [
     { kind: "cup", count: 9 },
     { kind: "steam", count: 8 },
+  ],
+  // Breaking Bad: drifting "Blue Sky" meth crystals + rising flask bubbles.
+  breakingbad: [
+    { kind: "crystal", count: 18 },
+    { kind: "bubble", count: 12 },
   ],
 };
 
@@ -148,6 +161,39 @@ function makeParticle(kind: Kind): Particle {
         },
       };
     }
+    case "crystal": {
+      const size = rand(9, 18);
+      return {
+        kind,
+        style: {
+          left: `${left}%`,
+          top: "-6%",
+          width: `${size}px`,
+          height: `${size}px`,
+          ["--ae-drift" as string]: drift,
+          ["--ae-spin" as string]: `${rand(-220, 220)}deg`,
+          animationName: "ae-crystal, ae-glint",
+          animationDuration: `${rand(11, 20)}s, ${rand(2.2, 4.5)}s`,
+          animationDelay: `${delay}s, ${delay}s`,
+        },
+      };
+    }
+    case "bubble": {
+      const size = rand(3, 7);
+      return {
+        kind,
+        style: {
+          left: `${left}%`,
+          bottom: "-5%",
+          width: `${size}px`,
+          height: `${size}px`,
+          ["--ae-drift" as string]: `${rand(-26, 26)}px`,
+          animationName: "ae-rise",
+          animationDuration: `${rand(8, 15)}s`,
+          animationDelay: `${delay}s`,
+        },
+      };
+    }
   }
 }
 
@@ -184,6 +230,27 @@ function SteamIcon() {
         stroke="rgb(var(--fg))"
         strokeWidth="1.4"
         strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+/** Faceted "Blue Sky" meth crystal shard. Fixed blue (not theme-tinted) so the
+ *  show's signature colour reads clearly over the green hazmat theme. */
+function CrystalIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" width="100%" height="100%">
+      <path
+        d="M7 2h10l5 7-10 13L2 9l5-7Z"
+        fill="rgb(56 198 240 / 0.45)"
+        stroke="rgb(150 230 255 / 0.95)"
+        strokeWidth="1"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7 2l5 7 5-7M2 9h20M12 9v13"
+        stroke="rgb(190 240 255 / 0.8)"
+        strokeWidth="0.7"
       />
     </svg>
   );
@@ -238,6 +305,7 @@ export default function ThemeBackground({ effect }: { effect?: string }) {
         <span key={i} className={`ae-particle ae-${p.kind}`} style={p.style}>
           {p.kind === "cup" && <CupIcon />}
           {p.kind === "steam" && <SteamIcon />}
+          {p.kind === "crystal" && <CrystalIcon />}
         </span>
       ))}
       {effect === "friends" && <FrameAccent />}

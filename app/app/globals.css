@@ -68,6 +68,23 @@
     radial-gradient(700px 380px at 0% 90%, rgba(122, 28, 52, 0.06), transparent);
 }
 
+/* Breaking Bad — New Mexico desert sand + hazmat/meth green on dark, scoped to /test/breakingbad. */
+[data-theme="breakingbad"] {
+  --bg: 14 16 13;
+  --surface: 26 30 24;
+  --border: 58 66 50;
+  --fg: 232 226 206;
+  --muted: 158 164 142;
+  --accent: 122 176 92;
+  --accent-ink: 10 14 8;
+  --danger: 190 58 46;
+
+  background-image:
+    radial-gradient(1200px 600px at 50% -10%, rgba(122, 176, 92, 0.12), transparent),
+    radial-gradient(820px 420px at 100% 100%, rgba(214, 178, 96, 0.08), transparent),
+    radial-gradient(700px 380px at 0% 90%, rgba(190, 58, 46, 0.06), transparent);
+}
+
 body {
   @apply bg-bg text-fg font-serif antialiased;
   min-height: 100vh;
@@ -103,9 +120,18 @@ body {
 }
 /* SVG motifs: keep them un-filled and easing-eased for a gentle drift. */
 .ae-cup,
-.ae-steam {
+.ae-steam,
+.ae-crystal {
   border-radius: 0;
   animation-timing-function: ease-in-out;
+}
+/* Breaking Bad: blue meth crystals glow blue; flask bubbles are the same blue. */
+.ae-crystal {
+  filter: drop-shadow(0 0 5px rgb(56 198 240 / 0.7));
+}
+.ae-bubble {
+  background: rgb(56 198 240);
+  box-shadow: 0 0 8px rgb(56 198 240 / 0.7);
 }
 
 @keyframes ae-fall {
@@ -185,6 +211,28 @@ body {
   100% {
     transform: translate(0, 0);
     opacity: 0.4;
+  }
+}
+
+/* Breaking Bad: a crystal tumbles down the screen with a slow spin... */
+@keyframes ae-crystal {
+  from {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  to {
+    transform: translateY(106vh) translateX(var(--ae-drift, 0))
+      rotate(var(--ae-spin, 180deg));
+  }
+}
+
+/* ...while glinting like a faceted shard catching the light. */
+@keyframes ae-glint {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.95;
   }
 }
 
