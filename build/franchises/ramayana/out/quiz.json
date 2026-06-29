@@ -1,0 +1,330 @@
+{
+  "franchise": "ramayana",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "The army stands at the ocean's edge; Lanka lies across the water and every eye turns to you for a way over.",
+      "trait": "openness",
+      "reverse": false,
+      "options": [
+        { "label": "Ideas pour out of you faster than they can be tried", "value": 5 },
+        { "label": "You offer several clever approaches worth attempting", "value": 4 },
+        { "label": "You put forward one workable plan", "value": 3 },
+        { "label": "You wait to hear what the others devise", "value": 2 },
+        { "label": "Your mind comes up empty; someone else must find the way", "value": 1 }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "A wandering sage describes a distant kingdom you have never seen.",
+      "trait": "openness",
+      "reverse": false,
+      "options": [
+        { "label": "You picture every spire, river and garden as if you walked there", "value": 5 },
+        { "label": "You imagine it clearly, scene by scene", "value": 4 },
+        { "label": "You form a rough picture of it", "value": 3 },
+        { "label": "You can barely conjure an image", "value": 2 },
+        { "label": "You see nothing; it stays mere words", "value": 1 }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "A guru lays out a subtle teaching on dharma, just once, and waits.",
+      "trait": "openness",
+      "reverse": false,
+      "options": [
+        { "label": "You grasp it at once and see further than was said", "value": 5 },
+        { "label": "You understand it quickly and clearly", "value": 4 },
+        { "label": "You get there after turning it over", "value": 3 },
+        { "label": "You need it explained again", "value": 2 },
+        { "label": "It stays beyond you however it is told", "value": 1 }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "Round the fire in the forest, the talk drifts to the soul, fate, and the meaning of it all.",
+      "trait": "openness",
+      "reverse": true,
+      "options": [
+        { "label": "Such talk wearies you; you'd rather tend to the camp", "value": 5 },
+        { "label": "You have little patience for it, but you let it run", "value": 4 },
+        { "label": "You'll join in if it turns to something useful", "value": 3 },
+        { "label": "You find the questions worth turning over", "value": 2 },
+        { "label": "You delight in chasing the deepest mysteries for their own sake", "value": 1 }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "You stand in a hermitage left in ruins and are asked how it might be restored.",
+      "trait": "openness",
+      "reverse": true,
+      "options": [
+        { "label": "You can't picture it; you only see the rubble", "value": 5 },
+        { "label": "Imagining it does not come easily", "value": 4 },
+        { "label": "You sketch a rough idea of it", "value": 3 },
+        { "label": "You see it taking shape fairly clearly", "value": 2 },
+        { "label": "A whole vision blooms before you, vivid in every detail", "value": 1 }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "At dusk the word comes: you must leave for fourteen years of exile at first light.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "options": [
+        { "label": "You are already ready; nothing catches you unequipped", "value": 5 },
+        { "label": "You prepare thoroughly, with time to spare", "value": 4 },
+        { "label": "You gather what you can in time", "value": 3 },
+        { "label": "You scramble and forget a few things", "value": 2 },
+        { "label": "You set out unprepared and hope for the best", "value": 1 }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "A treaty of alliance is read aloud before you set your seal to it.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "options": [
+        { "label": "You catch every clause and the smallest wording", "value": 5 },
+        { "label": "You note the important details carefully", "value": 4 },
+        { "label": "You follow the main points", "value": 3 },
+        { "label": "You skim past most of it", "value": 2 },
+        { "label": "You barely listen and simply agree", "value": 1 }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "The host must make camp on the shore for the long siege ahead.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "options": [
+        { "label": "Everything must have its place; you order the whole camp", "value": 5 },
+        { "label": "You keep things tidy and arranged", "value": 4 },
+        { "label": "You impose some order where it matters", "value": 3 },
+        { "label": "You leave most of it loose", "value": 2 },
+        { "label": "You let the camp fall into disarray; order is not your concern", "value": 1 }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "A delicate duty falls to you with no instructions and much at stake.",
+      "trait": "conscientiousness",
+      "reverse": true,
+      "options": [
+        { "label": "You'll make a mess of it before you make it right", "value": 5 },
+        { "label": "Things tend to get tangled in your hands", "value": 4 },
+        { "label": "It comes out fine, with a few loose ends", "value": 3 },
+        { "label": "You handle it cleanly", "value": 2 },
+        { "label": "You carry it out flawlessly, nothing left amiss", "value": 1 }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "A hard and thankless task is laid upon you to perform.",
+      "trait": "conscientiousness",
+      "reverse": true,
+      "options": [
+        { "label": "You slip away and leave it undone", "value": 5 },
+        { "label": "You put it off as long as you can", "value": 4 },
+        { "label": "You do it, grumbling, in the end", "value": 3 },
+        { "label": "You see it through dutifully", "value": 2 },
+        { "label": "You would never abandon a duty, whatever the cost", "value": 1 }
+      ]
+    },
+    {
+      "id": "q11",
+      "text": "A great victory feast fills the hall with music and light.",
+      "trait": "extraversion",
+      "reverse": false,
+      "options": [
+        { "label": "You are at the heart of it; the celebration revolves around you", "value": 5 },
+        { "label": "You are lively and draw people in", "value": 4 },
+        { "label": "You enjoy it without taking center stage", "value": 3 },
+        { "label": "You keep to the quiet edges", "value": 2 },
+        { "label": "You would rather not be there at all", "value": 1 }
+      ]
+    },
+    {
+      "id": "q12",
+      "text": "Envoys from an unfamiliar court arrive and stand waiting.",
+      "trait": "extraversion",
+      "reverse": false,
+      "options": [
+        { "label": "You step up first and open the talk", "value": 5 },
+        { "label": "You readily strike up conversation", "value": 4 },
+        { "label": "You speak once you are spoken to", "value": 3 },
+        { "label": "You wait for others to begin", "value": 2 },
+        { "label": "You avoid starting anything and hang back", "value": 1 }
+      ]
+    },
+    {
+      "id": "q13",
+      "text": "A whole assembly falls silent and turns to hear you address them.",
+      "trait": "extraversion",
+      "reverse": false,
+      "options": [
+        { "label": "You thrive with every eye upon you", "value": 5 },
+        { "label": "You are comfortable holding their attention", "value": 4 },
+        { "label": "You manage it, though you do not seek it", "value": 3 },
+        { "label": "You feel the gaze and shrink a little", "value": 2 },
+        { "label": "You dread it and wish another would speak", "value": 1 }
+      ]
+    },
+    {
+      "id": "q14",
+      "text": "A war council debates the next move, voices rising on every side.",
+      "trait": "extraversion",
+      "reverse": true,
+      "options": [
+        { "label": "You stay in the background and let it unfold", "value": 5 },
+        { "label": "You mostly keep to the edges", "value": 4 },
+        { "label": "You speak up now and then", "value": 3 },
+        { "label": "You are right in the thick of it", "value": 2 },
+        { "label": "You command the whole discussion from the front", "value": 1 }
+      ]
+    },
+    {
+      "id": "q15",
+      "text": "You are brought among a forest people you have never met.",
+      "trait": "extraversion",
+      "reverse": true,
+      "options": [
+        { "label": "You fall silent and keep to yourself among them", "value": 5 },
+        { "label": "You stay reserved and speak little", "value": 4 },
+        { "label": "You warm up slowly", "value": 3 },
+        { "label": "You mix in without much trouble", "value": 2 },
+        { "label": "You greet every stranger as warmly as an old friend", "value": 1 }
+      ]
+    },
+    {
+      "id": "q16",
+      "text": "A grieving widow comes before you and pours out her sorrow.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "options": [
+        { "label": "Her grief becomes your own; you feel it to the bone", "value": 5 },
+        { "label": "You are deeply moved and offer real comfort", "value": 4 },
+        { "label": "You acknowledge her pain", "value": 3 },
+        { "label": "You stay rather detached", "value": 2 },
+        { "label": "Her feelings do not reach you", "value": 1 }
+      ]
+    },
+    {
+      "id": "q17",
+      "text": "A weary stranger begs your help just as you set out on your own urgent errand.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "options": [
+        { "label": "You drop everything to help, however long it takes", "value": 5 },
+        { "label": "You make real time for them", "value": 4 },
+        { "label": "You help if it can be quick", "value": 3 },
+        { "label": "You would rather not be delayed", "value": 2 },
+        { "label": "You pass on by; your errand comes first", "value": 1 }
+      ]
+    },
+    {
+      "id": "q18",
+      "text": "A frightened messenger trembles before you, bearing ill news.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "options": [
+        { "label": "You calm him at once; he feels safe in your presence", "value": 5 },
+        { "label": "You put him at ease", "value": 4 },
+        { "label": "You hear him out plainly", "value": 3 },
+        { "label": "You leave him on edge", "value": 2 },
+        { "label": "Your manner only frightens him more", "value": 1 }
+      ]
+    },
+    {
+      "id": "q19",
+      "text": "A rival speaks foolishly and boastfully in open court.",
+      "trait": "agreeableness",
+      "reverse": true,
+      "options": [
+        { "label": "You cut him down with a cruel, cutting word", "value": 5 },
+        { "label": "You let a sharp jab slip", "value": 4 },
+        { "label": "You answer firmly but fairly", "value": 3 },
+        { "label": "You hold your tongue", "value": 2 },
+        { "label": "You would never demean another, even a fool", "value": 1 }
+      ]
+    },
+    {
+      "id": "q20",
+      "text": "At a gathering, people around you share their lives and their troubles.",
+      "trait": "agreeableness",
+      "reverse": true,
+      "options": [
+        { "label": "The affairs of others simply do not interest you", "value": 5 },
+        { "label": "You pay them little mind", "value": 4 },
+        { "label": "You listen politely enough", "value": 3 },
+        { "label": "You are genuinely curious about them", "value": 2 },
+        { "label": "You take a deep interest in everyone you meet", "value": 1 }
+      ]
+    },
+    {
+      "id": "q21",
+      "text": "On the eve of battle the carefully laid plan begins to unravel.",
+      "trait": "neuroticism",
+      "reverse": false,
+      "options": [
+        { "label": "Panic grips you at once", "value": 5 },
+        { "label": "You grow tense and rattled", "value": 4 },
+        { "label": "You feel the strain but hold steady", "value": 3 },
+        { "label": "You stay mostly calm", "value": 2 },
+        { "label": "The pressure barely touches you", "value": 1 }
+      ]
+    },
+    {
+      "id": "q22",
+      "text": "Someone you love has ridden into danger, and the night stretches long.",
+      "trait": "neuroticism",
+      "reverse": false,
+      "options": [
+        { "label": "You are consumed with worry, unable to rest", "value": 5 },
+        { "label": "You fret over every possibility", "value": 4 },
+        { "label": "You worry a while, then set it aside", "value": 3 },
+        { "label": "You trust it will turn out well", "value": 2 },
+        { "label": "You hardly worry at all", "value": 1 }
+      ]
+    },
+    {
+      "id": "q23",
+      "text": "Across a single trying day, fortunes rise and fall again and again.",
+      "trait": "neuroticism",
+      "reverse": false,
+      "options": [
+        { "label": "Your mood lurches wildly from hour to hour", "value": 5 },
+        { "label": "Your feelings swing fairly often", "value": 4 },
+        { "label": "You have your ups and downs", "value": 3 },
+        { "label": "You stay fairly even", "value": 2 },
+        { "label": "Your temper holds steady through it all", "value": 1 }
+      ]
+    },
+    {
+      "id": "q24",
+      "text": "The realm is at peace and the day passes unhurried.",
+      "trait": "neuroticism",
+      "reverse": true,
+      "options": [
+        { "label": "You are perfectly at ease, untroubled", "value": 5 },
+        { "label": "You feel relaxed and calm", "value": 4 },
+        { "label": "You are somewhat settled", "value": 3 },
+        { "label": "An undercurrent of unease stays with you", "value": 2 },
+        { "label": "You can never truly relax, even now", "value": 1 }
+      ]
+    },
+    {
+      "id": "q25",
+      "text": "On the long road the hard losses begin to mount.",
+      "trait": "neuroticism",
+      "reverse": true,
+      "options": [
+        { "label": "You rarely feel low; you press straight on", "value": 5 },
+        { "label": "You dip only briefly, then recover", "value": 4 },
+        { "label": "You feel it a while before bouncing back", "value": 3 },
+        { "label": "The gloom settles over you and lingers", "value": 2 },
+        { "label": "It pulls you into a darkness hard to climb out of", "value": 1 }
+      ]
+    }
+  ]
+}
