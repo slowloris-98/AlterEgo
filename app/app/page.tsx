@@ -10,8 +10,16 @@ export default function Home() {
         <h1 className="text-5xl font-bold text-fg">AlterEgo</h1>
         <p className="mx-auto mt-4 max-w-xl text-muted">
           Which character are you? Pick a world below, answer a short themed
-          quiz, and we&apos;ll match you to a character using the Big Five
-          (OCEAN) personality traits.
+          quiz, and we&apos;ll match you to a character using the{" "}
+          <a
+            href="https://openpsychometrics.org/tests/IPIP-BFFM/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-accent underline underline-offset-2 hover:no-underline"
+          >
+            Big Five (OCEAN) personality test
+          </a>
+          .
         </p>
       </header>
 
