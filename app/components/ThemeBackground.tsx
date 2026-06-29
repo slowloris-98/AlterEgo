@@ -19,7 +19,9 @@ type Kind =
   | "cup"
   | "steam"
   | "crystal"
-  | "bubble";
+  | "bubble"
+  | "ember"
+  | "petal";
 
 interface Layer {
   kind: Kind;
@@ -43,6 +45,11 @@ const EFFECTS: Record<string, Layer[]> = {
   breakingbad: [
     { kind: "crystal", count: 18 },
     { kind: "bubble", count: 12 },
+  ],
+  // Ramayana: rising diya-lamp embers + falling lotus petals.
+  ramayana: [
+    { kind: "ember", count: 16 },
+    { kind: "petal", count: 14 },
   ],
 };
 
@@ -194,6 +201,39 @@ function makeParticle(kind: Kind): Particle {
         },
       };
     }
+    case "ember": {
+      const size = rand(2, 5);
+      return {
+        kind,
+        style: {
+          left: `${left}%`,
+          bottom: "-5%",
+          width: `${size}px`,
+          height: `${size}px`,
+          ["--ae-drift" as string]: `${rand(-30, 30)}px`,
+          animationName: "ae-rise, ae-flicker",
+          animationDuration: `${rand(8, 15)}s, ${rand(0.8, 2)}s`,
+          animationDelay: `${delay}s, ${delay}s`,
+        },
+      };
+    }
+    case "petal": {
+      const size = rand(10, 18);
+      return {
+        kind,
+        style: {
+          left: `${left}%`,
+          top: "-6%",
+          width: `${size}px`,
+          height: `${size}px`,
+          ["--ae-drift" as string]: drift,
+          ["--ae-spin" as string]: `${rand(-260, 260)}deg`,
+          animationName: "ae-petal",
+          animationDuration: `${rand(10, 18)}s`,
+          animationDelay: `${delay}s`,
+        },
+      };
+    }
   }
 }
 
@@ -256,6 +296,23 @@ function CrystalIcon() {
   );
 }
 
+/** Soft pink lotus petal that drifts down on the Ramayana theme. Fixed pink (not theme-tinted) so
+ *  it reads as a lotus rather than picking up the bhagwa-orange accent. */
+function PetalIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" width="100%" height="100%">
+      <path
+        d="M12 2c4 5 4 11 0 20C8 13 8 7 12 2Z"
+        fill="rgb(244 154 194 / 0.55)"
+        stroke="rgb(250 182 210 / 0.95)"
+        strokeWidth="1"
+        strokeLinejoin="round"
+      />
+      <path d="M12 4c0 6 0 11 0 16" stroke="rgb(190 70 130 / 0.45)" strokeWidth="0.7" />
+    </svg>
+  );
+}
+
 /** Static corner accent: the iconic yellow peephole picture frame. */
 function FrameAccent() {
   return (
@@ -306,6 +363,7 @@ export default function ThemeBackground({ effect }: { effect?: string }) {
           {p.kind === "cup" && <CupIcon />}
           {p.kind === "steam" && <SteamIcon />}
           {p.kind === "crystal" && <CrystalIcon />}
+          {p.kind === "petal" && <PetalIcon />}
         </span>
       ))}
       {effect === "friends" && <FrameAccent />}

@@ -85,6 +85,23 @@
     radial-gradient(700px 380px at 0% 90%, rgba(190, 58, 46, 0.06), transparent);
 }
 
+/* Ramayana — navy-blue temple night + bhagwa saffron-orange lamplight, scoped to /test/ramayana. */
+[data-theme="ramayana"] {
+  --bg: 12 20 46;
+  --surface: 22 34 68;
+  --border: 48 66 112;
+  --fg: 240 232 214;
+  --muted: 168 182 210;
+  --accent: 240 126 36;
+  --accent-ink: 12 20 46;
+  --danger: 198 64 56;
+
+  background-image:
+    radial-gradient(1200px 600px at 50% -10%, rgba(240, 126, 36, 0.14), transparent),
+    radial-gradient(820px 420px at 100% 100%, rgba(70, 110, 200, 0.10), transparent),
+    radial-gradient(700px 380px at 0% 90%, rgba(198, 64, 56, 0.06), transparent);
+}
+
 body {
   @apply bg-bg text-fg font-serif antialiased;
   min-height: 100vh;
@@ -118,12 +135,22 @@ body {
   background: rgb(var(--accent));
   box-shadow: 0 0 10px 2px rgb(var(--accent) / 0.6);
 }
+/* Ramayana: glowing diya embers drifting up like lamplight on Diwali night. */
+.ae-ember {
+  background: rgb(var(--accent));
+  box-shadow: 0 0 8px 2px rgb(var(--accent) / 0.7);
+}
 /* SVG motifs: keep them un-filled and easing-eased for a gentle drift. */
 .ae-cup,
 .ae-steam,
-.ae-crystal {
+.ae-crystal,
+.ae-petal {
   border-radius: 0;
   animation-timing-function: ease-in-out;
+}
+/* Ramayana: lotus petals glow soft pink, independent of the bhagwa accent. */
+.ae-petal {
+  filter: drop-shadow(0 0 4px rgb(244 154 194 / 0.5));
 }
 /* Breaking Bad: blue meth crystals glow blue; flask bubbles are the same blue. */
 .ae-crystal {
@@ -233,6 +260,25 @@ body {
   }
   50% {
     opacity: 0.95;
+  }
+}
+
+/* Ramayana: a lotus petal flutters down the screen, swaying and slowly turning. */
+@keyframes ae-petal {
+  from {
+    transform: translateY(-8vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.85;
+  }
+  90% {
+    opacity: 0.85;
+  }
+  to {
+    transform: translateY(108vh) translateX(var(--ae-drift, 0))
+      rotate(var(--ae-spin, 180deg));
+    opacity: 0;
   }
 }
 

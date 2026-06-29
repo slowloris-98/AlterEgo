@@ -1,0 +1,279 @@
+{
+  "franchise": "ramayana",
+  "stats": {
+    "openness": {
+      "mean": 47.11,
+      "std": 28.32
+    },
+    "conscientiousness": {
+      "mean": 53.36,
+      "std": 29.41
+    },
+    "extraversion": {
+      "mean": 43.8,
+      "std": 25.13
+    },
+    "agreeableness": {
+      "mean": 64.83,
+      "std": 35.58
+    },
+    "neuroticism": {
+      "mean": 44.89,
+      "std": 32.3
+    }
+  },
+  "characters": [
+    {
+      "name": "Rama",
+      "raw": {
+        "openness": 92.4,
+        "conscientiousness": 100.0,
+        "extraversion": 53.7,
+        "agreeableness": 93.7,
+        "neuroticism": 10.8
+      },
+      "z": {
+        "openness": 1.5985,
+        "conscientiousness": 1.5859,
+        "extraversion": 0.3932,
+        "agreeableness": 0.8123,
+        "neuroticism": -1.0542
+      },
+      "blurb": "Rama is a principled, imaginative idealist who pursues his duties with unwavering calm and compassion."
+    },
+    {
+      "name": "Sita",
+      "raw": {
+        "openness": 59.0,
+        "conscientiousness": 53.0,
+        "extraversion": 0.0,
+        "agreeableness": 94.5,
+        "neuroticism": 75.1
+      },
+      "z": {
+        "openness": 0.4195,
+        "conscientiousness": -0.0133,
+        "extraversion": -1.7429,
+        "agreeableness": 0.8342,
+        "neuroticism": 0.9362
+      },
+      "blurb": "Sita is deeply compassionate yet emotionally fragile, preferring quiet devotion over social engagement."
+    },
+    {
+      "name": "Lakshman",
+      "raw": {
+        "openness": 41.2,
+        "conscientiousness": 81.1,
+        "extraversion": 26.2,
+        "agreeableness": 86.9,
+        "neuroticism": 15.8
+      },
+      "z": {
+        "openness": -0.2087,
+        "conscientiousness": 0.9432,
+        "extraversion": -0.7019,
+        "agreeableness": 0.6214,
+        "neuroticism": -0.9009
+      },
+      "blurb": "Lakshman is a loyal, dependable warrior who quietly serves with unwavering dedication."
+    },
+    {
+      "name": "Bharata",
+      "raw": {
+        "openness": 56.7,
+        "conscientiousness": 82.5,
+        "extraversion": 65.9,
+        "agreeableness": 93.6,
+        "neuroticism": 83.3
+      },
+      "z": {
+        "openness": 0.3386,
+        "conscientiousness": 0.9901,
+        "extraversion": 0.8798,
+        "agreeableness": 0.8089,
+        "neuroticism": 1.1898
+      },
+      "blurb": "Bharata is a deeply conscientious, emotionally intense person driven by compassion for others."
+    },
+    {
+      "name": "Hanuman",
+      "raw": {
+        "openness": 100.0,
+        "conscientiousness": 87.8,
+        "extraversion": 58.6,
+        "agreeableness": 93.5,
+        "neuroticism": 0.0
+      },
+      "z": {
+        "openness": 1.8676,
+        "conscientiousness": 1.1727,
+        "extraversion": 0.5901,
+        "agreeableness": 0.8058,
+        "neuroticism": -1.3898
+      },
+      "blurb": "Hanuman is a supremely devoted, disciplined idealist who faces any challenge with unwavering calm."
+    },
+    {
+      "name": "Ravana",
+      "raw": {
+        "openness": 19.0,
+        "conscientiousness": 13.8,
+        "extraversion": 100.0,
+        "agreeableness": 0.0,
+        "neuroticism": 100.0
+      },
+      "z": {
+        "openness": -0.9926,
+        "conscientiousness": -1.3434,
+        "extraversion": 2.2364,
+        "agreeableness": -1.8221,
+        "neuroticism": 1.7062
+      },
+      "blurb": "A volatile, domineering egomaniac consumed by rage and unchecked ambition."
+    },
+    {
+      "name": "Dasaratha",
+      "raw": {
+        "openness": 23.5,
+        "conscientiousness": 32.7,
+        "extraversion": 34.4,
+        "agreeableness": 71.1,
+        "neuroticism": 82.6
+      },
+      "z": {
+        "openness": -0.8333,
+        "conscientiousness": -0.7032,
+        "extraversion": -0.3752,
+        "agreeableness": 0.1765,
+        "neuroticism": 1.1681
+      },
+      "blurb": "A deeply anxious, emotionally volatile king driven by duty and kindness rather than reason."
+    },
+    {
+      "name": "Kaikeyi",
+      "raw": {
+        "openness": 31.9,
+        "conscientiousness": 33.0,
+        "extraversion": 54.2,
+        "agreeableness": 7.8,
+        "neuroticism": 60.0
+      },
+      "z": {
+        "openness": -0.5374,
+        "conscientiousness": -0.6906,
+        "extraversion": 0.4123,
+        "agreeableness": -1.6031,
+        "neuroticism": 0.4681
+      },
+      "blurb": "Manipulative schemer who's emotionally volatile, self-serving, and utterly ruthless."
+    },
+    {
+      "name": "Sugriva",
+      "raw": {
+        "openness": 45.0,
+        "conscientiousness": 40.8,
+        "extraversion": 57.6,
+        "agreeableness": 70.6,
+        "neuroticism": 46.7
+      },
+      "z": {
+        "openness": -0.0734,
+        "conscientiousness": -0.4274,
+        "extraversion": 0.5483,
+        "agreeableness": 0.161,
+        "neuroticism": 0.0557
+      },
+      "blurb": "Sugriva is a likeable, talkative ally who acts impulsively without much planning or caution."
+    },
+    {
+      "name": "Vibhishana",
+      "raw": {
+        "openness": 75.8,
+        "conscientiousness": 76.6,
+        "extraversion": 14.6,
+        "agreeableness": 100.0,
+        "neuroticism": 33.5
+      },
+      "z": {
+        "openness": 1.0127,
+        "conscientiousness": 0.7909,
+        "extraversion": -1.1624,
+        "agreeableness": 0.9885,
+        "neuroticism": -0.3542
+      },
+      "blurb": "A thoughtful, principled loner who seeks wisdom and treats everyone with unwavering kindness."
+    },
+    {
+      "name": "Kumbhakarna",
+      "raw": {
+        "openness": 0.0,
+        "conscientiousness": 0.0,
+        "extraversion": 40.8,
+        "agreeableness": 29.1,
+        "neuroticism": 43.6
+      },
+      "z": {
+        "openness": -1.6635,
+        "conscientiousness": -1.8143,
+        "extraversion": -0.1202,
+        "agreeableness": -1.0051,
+        "neuroticism": -0.0409
+      },
+      "blurb": "A moody, undisciplined giant who sleeps through life's chaos indifferently."
+    },
+    {
+      "name": "Angad",
+      "raw": {
+        "openness": 36.8,
+        "conscientiousness": 44.0,
+        "extraversion": 54.1,
+        "agreeableness": 66.0,
+        "neuroticism": 49.4
+      },
+      "z": {
+        "openness": -0.3658,
+        "conscientiousness": -0.3169,
+        "extraversion": 0.4087,
+        "agreeableness": 0.0315,
+        "neuroticism": 0.1396
+      },
+      "blurb": "Angad is a likable, straightforward warrior who acts without overthinking consequences."
+    },
+    {
+      "name": "Jambavan",
+      "raw": {
+        "openness": 54.3,
+        "conscientiousness": 61.2,
+        "extraversion": 20.7,
+        "agreeableness": 83.2,
+        "neuroticism": 0.1
+      },
+      "z": {
+        "openness": 0.2528,
+        "conscientiousness": 0.2662,
+        "extraversion": -0.918,
+        "agreeableness": 0.5152,
+        "neuroticism": -1.387
+      },
+      "blurb": "Loyal, calm bear who prefers thoughtful action over socializing."
+    },
+    {
+      "name": "Indrajit",
+      "raw": {
+        "openness": 24.1,
+        "conscientiousness": 40.4,
+        "extraversion": 32.5,
+        "agreeableness": 17.7,
+        "neuroticism": 27.6
+      },
+      "z": {
+        "openness": -0.8139,
+        "conscientiousness": -0.4396,
+        "extraversion": -0.4501,
+        "agreeableness": -1.3255,
+        "neuroticism": -0.5359
+      },
+      "blurb": "Indrajit is a cunning, headstrong warrior who prioritizes power over principle."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "ramayana",
+  "display_name": "Ramayana",
+  "source": {
+    "type": "gutenberg_text",
+    "description": "Valmiki's Ramayana, the complete epic (all seven kandas), Ralph T. H. Griffith's English verse translation (1870-1874). Gutenberg boilerplate and the front-matter contents are stripped; the body is split on canto headings and packed into uniform ~chapter-sized segments.",
+    "ref": "Project Gutenberg eBook #24869 — The Rámáyan of Válmíki, trans. R. T. H. Griffith (in books/, gitignored)"
+  },
+  "characters": [
+    { "index": 0,  "name": "Rama" },
+    { "index": 1,  "name": "Sita" },
+    { "index": 2,  "name": "Lakshman" },
+    { "index": 3,  "name": "Bharata" },
+    { "index": 4,  "name": "Hanuman" },
+    { "index": 5,  "name": "Ravana" },
+    { "index": 6,  "name": "Dasaratha" },
+    { "index": 7,  "name": "Kaikeyi" },
+    { "index": 8,  "name": "Sugriva" },
+    { "index": 9,  "name": "Vibhishana" },
+    { "index": 10, "name": "Kumbhakarna" },
+    { "index": 11, "name": "Angad" },
+    { "index": 12, "name": "Jambavan" },
+    { "index": 13, "name": "Indrajit" }
+  ]
+}
