@@ -55,14 +55,52 @@ function MatchAvatar({ name, image }: { name: string; image?: string }) {
   );
 }
 
+/** Records a thumbs rating and/or free-text feedback against the quiz_logs row. */
+async function sendFeedback(
+  logId: string | null | undefined,
+  payload: { rating?: "up" | "down"; feedbackText?: string }
+): Promise<void> {
+  if (!logId) return; // Supabase unconfigured / not logged — nothing to attach to.
+  try {
+    await fetch("/api/feedback", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ logId, ...payload }),
+    });
+  } catch {
+    // Best-effort: never let feedback failures break the results view.
+  }
+}
+
 export default function ResultCard({
   result,
+  logId,
   onRetake,
 }: {
   result: MatchResult;
+  logId?: string | null;
   onRetake: () => void;
 }) {
   const { match, runnersUp, traits, matchTraits } = result;
+
+  const [rating, setRating] = useState<"up" | "down" | null>(null);
+  const [suggestion, setSuggestion] = useState("");
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  function rate(value: "up" | "down") {
+    setRating(value);
+    void sendFeedback(logId, { rating: value });
+  }
+
+  async function sendSuggestion() {
+    const text = suggestion.trim();
+    if (!text || sending) return;
+    setSending(true);
+    await sendFeedback(logId, { feedbackText: text });
+    setSending(false);
+    setSent(true);
+  }
 
   return (
     <div className="space-y-8">
@@ -134,6 +172,79 @@ export default function ResultCard({
             </li>
           ))}
         </ol>
+      </section>
+
+      {/* Feedback: was the match accurate + open suggestions */}
+      <section className="rounded-2xl border border-border bg-surface/40 p-6">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h3 className="text-lg font-semibold text-fg">Was this accurate?</h3>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              aria-label="Thumbs up"
+              aria-pressed={rating === "up"}
+              onClick={() => rate("up")}
+              className={`rounded-lg border px-4 py-2 text-lg transition ${
+                rating === "up"
+                  ? "border-accent bg-accent/10"
+                  : "border-border hover:border-accent/50"
+              }`}
+            >
+              👍
+            </button>
+            <button
+              type="button"
+              aria-label="Thumbs down"
+              aria-pressed={rating === "down"}
+              onClick={() => rate("down")}
+              className={`rounded-lg border px-4 py-2 text-lg transition ${
+                rating === "down"
+                  ? "border-accent bg-accent/10"
+                  : "border-border hover:border-accent/50"
+              }`}
+            >
+              👎
+            </button>
+          </div>
+        </div>
+        {rating && (
+          <p className="mt-2 text-sm text-muted">Thanks for the feedback!</p>
+        )}
+
+        <div className="mt-5">
+          <label
+            htmlFor="suggestion"
+            className="mb-2 block text-sm text-fg/90"
+          >
+            Suggestions, improvements or new series ideas
+          </label>
+          {sent ? (
+            <p className="rounded-lg border border-accent/40 bg-accent/10 p-3 text-sm text-fg">
+              Thanks for the feedback!
+            </p>
+          ) : (
+            <>
+              <textarea
+                id="suggestion"
+                value={suggestion}
+                onChange={(e) => setSuggestion(e.target.value)}
+                rows={3}
+                placeholder="Tell us what you think…"
+                className="w-full rounded-lg border border-border bg-surface/40 p-3 text-sm text-fg placeholder:text-muted focus:border-accent/60 focus:outline-none"
+              />
+              <div className="mt-2 text-right">
+                <button
+                  type="button"
+                  onClick={sendSuggestion}
+                  disabled={!suggestion.trim() || sending}
+                  className="rounded-lg border border-accent/40 px-4 py-2 text-accent transition hover:bg-accent/10 disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  {sending ? "Sending…" : "Send"}
+                </button>
+              </div>
+            </>
+          )}
+        </div>
       </section>
 
       <div className="text-center">

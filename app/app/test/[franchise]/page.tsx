@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { listFranchises, loadFranchise } from "@/lib/registry";
 import Quiz from "@/components/Quiz";
+import ThemeBackground from "@/components/ThemeBackground";
 
 // Pre-render a page per known franchise; still works for new ones on demand.
 export function generateStaticParams() {
@@ -22,6 +23,7 @@ export default async function TestPage({
       data-theme={fr.meta.theme ?? fr.meta.id}
       className="-mx-5 min-h-screen px-5"
     >
+      <ThemeBackground effect={fr.meta.theme ?? fr.meta.id} />
       <main className="space-y-8">
         <header className="text-center">
           <Link
