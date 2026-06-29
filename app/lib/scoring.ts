@@ -86,6 +86,7 @@ export function rankMatches(
         blurb: c.blurb,
         distance,
         similarity: 1 / (1 + distance),
+        image: c.image,
       };
     })
     .sort((a, b) => a.distance - b.distance);

@@ -33,6 +33,8 @@ export interface Character {
   raw: TraitScores;
   z: TraitScores;
   blurb: string;
+  /** Resolved at load time from public/art/characters/<id>/<slug>.<ext>, if a file exists. */
+  image?: string;
 }
 
 export interface TraitStat {
@@ -68,6 +70,8 @@ export interface RankedMatch {
   blurb: string;
   distance: number;
   similarity: number;
+  /** Character image URL, present only when a file exists for this character. */
+  image?: string;
 }
 
 /** What the /api/match endpoint returns to the client. */
