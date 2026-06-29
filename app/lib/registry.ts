@@ -64,6 +64,16 @@ export function listFranchises(): FranchiseMeta[] {
     .sort((a, b) => a.display_name.localeCompare(b.display_name));
 }
 
+/** Full payload for every discovered franchise. */
+export function loadAllFranchises(): Franchise[] {
+  if (!fs.existsSync(DATA_DIR)) return [];
+  return fs
+    .readdirSync(DATA_DIR)
+    .filter(isFranchiseDir)
+    .map((id) => loadFranchise(id))
+    .filter((f): f is Franchise => f !== null);
+}
+
 /** Full franchise payload (meta + quiz + character data). Null if unknown. */
 export function loadFranchise(id: string): Franchise | null {
   // Guard against path traversal; only accept simple ids.
