@@ -1,0 +1,330 @@
+{
+  "franchise": "breakingbad",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "The cook has stalled, the cash is short, and everyone in the RV is looking to you for a way out.",
+      "trait": "openness",
+      "reverse": false,
+      "options": [
+        { "label": "You rattle off five angles before the engine cools, each crazier than the last", "value": 5 },
+        { "label": "You offer a couple of genuinely clever plays worth running", "value": 4 },
+        { "label": "You have one idea, and you put it on the table", "value": 3 },
+        { "label": "You wait to hear what the others come up with", "value": 2 },
+        { "label": "You have nothing; somebody else needs to figure this out", "value": 1 }
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "Someone hands you an empty warehouse and asks what an operation could look like here.",
+      "trait": "openness",
+      "reverse": false,
+      "options": [
+        { "label": "You see the whole empire already running, down to the last detail", "value": 5 },
+        { "label": "You picture it clearly enough to describe it room by room", "value": 4 },
+        { "label": "You can see roughly what it might become", "value": 3 },
+        { "label": "You struggle to imagine much beyond the bare concrete", "value": 2 },
+        { "label": "You see an empty building; dreaming it up is a waste of time", "value": 1 }
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "A chemist lays out the tangled reasoning behind a new synthesis, fast and full of jargon.",
+      "trait": "openness",
+      "reverse": false,
+      "options": [
+        { "label": "You've worked out where it lands before they finish", "value": 5 },
+        { "label": "You follow every step without trouble", "value": 4 },
+        { "label": "You get there after a moment to think it through", "value": 3 },
+        { "label": "You need a good chunk of it explained again", "value": 2 },
+        { "label": "You give up; that kind of theory just loses you", "value": 1 }
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "Late in the desert the talk drifts to big questions — chance, consequence, the meaning of it all.",
+      "trait": "openness",
+      "reverse": true,
+      "options": [
+        { "label": "That kind of talk bores you stiff; you'd rather get back to work", "value": 5 },
+        { "label": "You have little patience for it, but you let it run", "value": 4 },
+        { "label": "You'll join in if it turns to something useful", "value": 3 },
+        { "label": "You find the ideas worth chewing on", "value": 2 },
+        { "label": "You love turning the big mysteries over for their own sake", "value": 1 }
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "The cover story has fallen apart and you need a believable new one, invented on the spot.",
+      "trait": "openness",
+      "reverse": true,
+      "options": [
+        { "label": "Inventing stories isn't in you; you'd just stick to the plain truth", "value": 5 },
+        { "label": "You can manage a flimsy excuse, but it won't hold up", "value": 4 },
+        { "label": "You piece together something passable with effort", "value": 3 },
+        { "label": "You spin a decent tale when you have to", "value": 2 },
+        { "label": "A whole convincing world pours out of you on demand", "value": 1 }
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "A meeting with people you don't trust is set for dawn in the open desert.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "options": [
+        { "label": "You arrive early having planned every contingency twice over", "value": 5 },
+        { "label": "You've thought it through and packed what you'll need", "value": 4 },
+        { "label": "You've got the basics covered", "value": 3 },
+        { "label": "You'll mostly improvise when you get there", "value": 2 },
+        { "label": "You show up and hope it works out", "value": 1 }
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "A single overlooked detail could bring the whole thing crashing down.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "options": [
+        { "label": "You catch the small things nobody else even notices", "value": 5 },
+        { "label": "You're careful and rarely miss much", "value": 4 },
+        { "label": "You watch the details that obviously matter", "value": 3 },
+        { "label": "You skim past a lot of the fine print", "value": 2 },
+        { "label": "Details slip right by you", "value": 1 }
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "Your workspace and your books are how the whole operation stays standing.",
+      "trait": "conscientiousness",
+      "reverse": false,
+      "options": [
+        { "label": "Everything is labelled, squared away, and exactly where it belongs", "value": 5 },
+        { "label": "You keep things tidy and well organized", "value": 4 },
+        { "label": "It's orderly enough to find what you need", "value": 3 },
+        { "label": "It's a bit of a jumble most days", "value": 2 },
+        { "label": "It's pure chaos and you don't mind", "value": 1 }
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "A job lands in your lap with no instructions and high stakes.",
+      "trait": "conscientiousness",
+      "reverse": true,
+      "options": [
+        { "label": "You'll make a mess of it before you make it right", "value": 5 },
+        { "label": "Things tend to get untidy in your hands", "value": 4 },
+        { "label": "It comes out fine, with a few loose ends", "value": 3 },
+        { "label": "You handle it cleanly", "value": 2 },
+        { "label": "You execute it flawlessly, nothing left dangling", "value": 1 }
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "Your share of the work is dull, thankless, and entirely your responsibility.",
+      "trait": "conscientiousness",
+      "reverse": true,
+      "options": [
+        { "label": "You'll dodge it and let someone else pick up the slack", "value": 5 },
+        { "label": "You drag your feet and do the bare minimum", "value": 4 },
+        { "label": "You get to it eventually", "value": 3 },
+        { "label": "You see it through because it's yours to do", "value": 2 },
+        { "label": "You carry your load no matter what, every time", "value": 1 }
+      ]
+    },
+    {
+      "id": "q11",
+      "text": "A backyard cookout fills up with people from every corner of your life.",
+      "trait": "extraversion",
+      "reverse": false,
+      "options": [
+        { "label": "You're the loud center of it, working the whole yard", "value": 5 },
+        { "label": "You get the room going and keep things lively", "value": 4 },
+        { "label": "You join the fun once it's already rolling", "value": 3 },
+        { "label": "You stick with one or two people off to the side", "value": 2 },
+        { "label": "You count the minutes until you can slip out", "value": 1 }
+      ]
+    },
+    {
+      "id": "q12",
+      "text": "You're stuck waiting in a room full of strangers with time to kill.",
+      "trait": "extraversion",
+      "reverse": false,
+      "options": [
+        { "label": "You strike up a conversation with everyone in reach", "value": 5 },
+        { "label": "You happily get a chat going with whoever's nearest", "value": 4 },
+        { "label": "You'll talk if someone opens the door first", "value": 3 },
+        { "label": "You'd rather not, but you'll answer if spoken to", "value": 2 },
+        { "label": "You keep to yourself and say nothing", "value": 1 }
+      ]
+    },
+    {
+      "id": "q13",
+      "text": "The plan only works if one person stands up and runs the room.",
+      "trait": "extraversion",
+      "reverse": false,
+      "options": [
+        { "label": "You take the floor without a second thought; all eyes on you is fine", "value": 5 },
+        { "label": "You're comfortable being the one in the spotlight", "value": 4 },
+        { "label": "You'll do it if it's clearly the right call", "value": 3 },
+        { "label": "You'd really rather someone else stepped up", "value": 2 },
+        { "label": "Being the center of attention is your nightmare", "value": 1 }
+      ]
+    },
+    {
+      "id": "q14",
+      "text": "The crew is hashing out the next move and everyone's talking at once.",
+      "trait": "extraversion",
+      "reverse": true,
+      "options": [
+        { "label": "You hang back in the shadows and let it all play out", "value": 5 },
+        { "label": "You mostly stay quiet on the edges", "value": 4 },
+        { "label": "You speak up now and then", "value": 3 },
+        { "label": "You're right in the thick of it", "value": 2 },
+        { "label": "You drive the whole conversation from the front", "value": 1 }
+      ]
+    },
+    {
+      "id": "q15",
+      "text": "You walk into a deal with people you've never met before.",
+      "trait": "extraversion",
+      "reverse": true,
+      "options": [
+        { "label": "You go silent around strangers until you've sized them up", "value": 5 },
+        { "label": "You stay pretty guarded and quiet with new faces", "value": 4 },
+        { "label": "You're reserved at first, then loosen up", "value": 3 },
+        { "label": "You warm to new people fairly fast", "value": 2 },
+        { "label": "You're chatting like old friends within minutes", "value": 1 }
+      ]
+    },
+    {
+      "id": "q16",
+      "text": "Someone in the crew is clearly falling apart under the pressure.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "options": [
+        { "label": "You feel it with them and can't walk away until they're okay", "value": 5 },
+        { "label": "You genuinely care and check that they're alright", "value": 4 },
+        { "label": "You notice and offer a few words", "value": 3 },
+        { "label": "You figure they'll sort themselves out", "value": 2 },
+        { "label": "Their feelings aren't your problem", "value": 1 }
+      ]
+    },
+    {
+      "id": "q17",
+      "text": "A friend needs real help on a day you're already stretched thin.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "options": [
+        { "label": "You drop everything and give them all the time they need", "value": 5 },
+        { "label": "You make real time for them despite the day", "value": 4 },
+        { "label": "You help where you can fit it in", "value": 3 },
+        { "label": "You tell them it'll have to wait", "value": 2 },
+        { "label": "You've got your own problems; they're on their own", "value": 1 }
+      ]
+    },
+    {
+      "id": "q18",
+      "text": "A nervous newcomer is sweating through a tense first meeting.",
+      "trait": "agreeableness",
+      "reverse": false,
+      "options": [
+        { "label": "You go out of your way to put them completely at ease", "value": 5 },
+        { "label": "You say something to take the edge off for them", "value": 4 },
+        { "label": "You give a small nod to settle them a little", "value": 3 },
+        { "label": "You let them stew; that's their business", "value": 2 },
+        { "label": "You almost enjoy watching them squirm", "value": 1 }
+      ]
+    },
+    {
+      "id": "q19",
+      "text": "Someone has wasted your time and you've had it with them.",
+      "trait": "agreeableness",
+      "reverse": true,
+      "options": [
+        { "label": "You cut them down with the sharpest insult you've got", "value": 5 },
+        { "label": "You let a few cruel jabs fly", "value": 4 },
+        { "label": "You snap once, then rein it in", "value": 3 },
+        { "label": "You bite your tongue and keep it civil", "value": 2 },
+        { "label": "You'd never belittle someone, however angry you are", "value": 1 }
+      ]
+    },
+    {
+      "id": "q20",
+      "text": "A partner starts telling you about their life outside the work.",
+      "trait": "agreeableness",
+      "reverse": true,
+      "options": [
+        { "label": "You tune out completely; other people's lives don't interest you", "value": 5 },
+        { "label": "You half-listen, mostly waiting for it to end", "value": 4 },
+        { "label": "You listen politely without really engaging", "value": 3 },
+        { "label": "You find yourself genuinely curious", "value": 2 },
+        { "label": "You want to know everything about what makes them tick", "value": 1 }
+      ]
+    },
+    {
+      "id": "q21",
+      "text": "A deal you can't control is unraveling by the minute.",
+      "trait": "neuroticism",
+      "reverse": false,
+      "options": [
+        { "label": "You're instantly wound tight, nerves screaming", "value": 5 },
+        { "label": "The stress hits you fast and hard", "value": 4 },
+        { "label": "You feel the pressure but hold steady", "value": 3 },
+        { "label": "You stay fairly cool through it", "value": 2 },
+        { "label": "You barely register the strain at all", "value": 1 }
+      ]
+    },
+    {
+      "id": "q22",
+      "text": "It's the quiet hours and there's nothing left to do but wait for tomorrow.",
+      "trait": "neuroticism",
+      "reverse": false,
+      "options": [
+        { "label": "Your mind races through everything that could go wrong", "value": 5 },
+        { "label": "You worry over the loose ends for a long while", "value": 4 },
+        { "label": "A few what-ifs nag at you", "value": 3 },
+        { "label": "You let most of it go", "value": 2 },
+        { "label": "You don't waste a second worrying", "value": 1 }
+      ]
+    },
+    {
+      "id": "q23",
+      "text": "The day swings from a windfall to a disaster and back again.",
+      "trait": "neuroticism",
+      "reverse": false,
+      "options": [
+        { "label": "Your mood whiplashes with every turn, high to low", "value": 5 },
+        { "label": "You swing noticeably with the ups and downs", "value": 4 },
+        { "label": "Your mood shifts some, but you reset", "value": 3 },
+        { "label": "You stay pretty even through it all", "value": 2 },
+        { "label": "You're rock-steady no matter which way it breaks", "value": 1 }
+      ]
+    },
+    {
+      "id": "q24",
+      "text": "The heat is on, the law is circling, and every move carries real risk.",
+      "trait": "neuroticism",
+      "reverse": true,
+      "options": [
+        { "label": "You stay relaxed and easy, like none of it touches you", "value": 5 },
+        { "label": "You keep calm and loose most of the time", "value": 4 },
+        { "label": "You're steady, with the odd jittery moment", "value": 3 },
+        { "label": "You feel the tension building under your skin", "value": 2 },
+        { "label": "You're permanently on edge, never able to settle", "value": 1 }
+      ]
+    },
+    {
+      "id": "q25",
+      "text": "Things have gone badly and the losses are starting to pile up.",
+      "trait": "neuroticism",
+      "reverse": true,
+      "options": [
+        { "label": "You rarely feel down; you just push straight ahead", "value": 5 },
+        { "label": "You get low only briefly, then shake it off", "value": 4 },
+        { "label": "You feel it for a while before bouncing back", "value": 3 },
+        { "label": "The gloom settles over you and lingers", "value": 2 },
+        { "label": "It sinks you into a darkness that's hard to climb out of", "value": 1 }
+      ]
+    }
+  ]
+}

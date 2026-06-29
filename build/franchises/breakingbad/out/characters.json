@@ -1,0 +1,189 @@
+{
+  "franchise": "breakingbad",
+  "stats": {
+    "openness": {
+      "mean": 40.89,
+      "std": 31.48
+    },
+    "conscientiousness": {
+      "mean": 52.7,
+      "std": 33.75
+    },
+    "extraversion": {
+      "mean": 51.82,
+      "std": 32.3
+    },
+    "agreeableness": {
+      "mean": 58.65,
+      "std": 33.23
+    },
+    "neuroticism": {
+      "mean": 58.89,
+      "std": 37.44
+    }
+  },
+  "characters": [
+    {
+      "name": "Walter White",
+      "raw": {
+        "openness": 100.0,
+        "conscientiousness": 74.0,
+        "extraversion": 42.7,
+        "agreeableness": 0.0,
+        "neuroticism": 89.9
+      },
+      "z": {
+        "openness": 1.8777,
+        "conscientiousness": 0.6302,
+        "extraversion": -0.2817,
+        "agreeableness": -1.765,
+        "neuroticism": 0.828
+      },
+      "blurb": "A brilliant, anxious schemer who'll ruthlessly pursue any idea without regard for others."
+    },
+    {
+      "name": "Skyler White",
+      "raw": {
+        "openness": 31.6,
+        "conscientiousness": 72.9,
+        "extraversion": 35.9,
+        "agreeableness": 77.6,
+        "neuroticism": 94.4
+      },
+      "z": {
+        "openness": -0.2964,
+        "conscientiousness": 0.5976,
+        "extraversion": -0.4916,
+        "agreeableness": 0.5691,
+        "neuroticism": 0.9476
+      },
+      "blurb": "Anxious perfectionist who plays by the rules but wrestles with constant worry."
+    },
+    {
+      "name": "Jesse Pinkman",
+      "raw": {
+        "openness": 41.7,
+        "conscientiousness": 0.0,
+        "extraversion": 60.1,
+        "agreeableness": 75.1,
+        "neuroticism": 100.0
+      },
+      "z": {
+        "openness": 0.0248,
+        "conscientiousness": -1.5615,
+        "extraversion": 0.257,
+        "agreeableness": 0.4956,
+        "neuroticism": 1.098
+      },
+      "blurb": "Anxious, impulsive people-pleaser who's emotionally volatile but genuinely cares about others."
+    },
+    {
+      "name": "Hank Schrader",
+      "raw": {
+        "openness": 24.0,
+        "conscientiousness": 59.2,
+        "extraversion": 87.1,
+        "agreeableness": 62.0,
+        "neuroticism": 51.6
+      },
+      "z": {
+        "openness": -0.5378,
+        "conscientiousness": 0.1935,
+        "extraversion": 1.0923,
+        "agreeableness": 0.1002,
+        "neuroticism": -0.1944
+      },
+      "blurb": "Hank is a boisterous, action-loving guy who plays by conventional rules."
+    },
+    {
+      "name": "Marie Schrader",
+      "raw": {
+        "openness": 18.2,
+        "conscientiousness": 32.9,
+        "extraversion": 79.0,
+        "agreeableness": 88.8,
+        "neuroticism": 88.3
+      },
+      "z": {
+        "openness": -0.722,
+        "conscientiousness": -0.5855,
+        "extraversion": 0.8415,
+        "agreeableness": 0.9064,
+        "neuroticism": 0.7847
+      },
+      "blurb": "Marie is anxious and people-pleasing but rigid in her thinking and resistant to new ideas."
+    },
+    {
+      "name": "Walter White Jr.",
+      "raw": {
+        "openness": 19.1,
+        "conscientiousness": 22.9,
+        "extraversion": 36.4,
+        "agreeableness": 100.0,
+        "neuroticism": 49.9
+      },
+      "z": {
+        "openness": -0.6909,
+        "conscientiousness": -0.8821,
+        "extraversion": -0.4777,
+        "agreeableness": 1.2444,
+        "neuroticism": -0.2393
+      },
+      "blurb": "A deeply kind, agreeable kid struggling with low discipline and limited imagination."
+    },
+    {
+      "name": "Mike Ehrmantraut",
+      "raw": {
+        "openness": 0.0,
+        "conscientiousness": 87.0,
+        "extraversion": 0.0,
+        "agreeableness": 13.1,
+        "neuroticism": 6.5
+      },
+      "z": {
+        "openness": -1.2989,
+        "conscientiousness": 1.0151,
+        "extraversion": -1.6043,
+        "agreeableness": -1.3695,
+        "neuroticism": -1.4004
+      },
+      "blurb": "Mike is a ruthless, disciplined loner who operates by his own rigid code."
+    },
+    {
+      "name": "Saul Goodman",
+      "raw": {
+        "openness": 72.1,
+        "conscientiousness": 25.4,
+        "extraversion": 100.0,
+        "agreeableness": 60.5,
+        "neuroticism": 49.4
+      },
+      "z": {
+        "openness": 0.9927,
+        "conscientiousness": -0.808,
+        "extraversion": 1.4916,
+        "agreeableness": 0.0572,
+        "neuroticism": -0.2524
+      },
+      "blurb": "Charismatic hustler who charms his way through life with creative schemes and minimal regard for rules."
+    },
+    {
+      "name": "Gus Fring",
+      "raw": {
+        "openness": 61.4,
+        "conscientiousness": 100.0,
+        "extraversion": 25.1,
+        "agreeableness": 50.7,
+        "neuroticism": 0.0
+      },
+      "z": {
+        "openness": 0.6522,
+        "conscientiousness": 1.4015,
+        "extraversion": -0.8279,
+        "agreeableness": -0.238,
+        "neuroticism": -1.5729
+      },
+      "blurb": "A meticulously disciplined, emotionally unflappable loner who masks ruthless pragmatism beneath civility."
+    }
+  ]
+}

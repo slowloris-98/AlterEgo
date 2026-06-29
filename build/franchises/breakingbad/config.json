@@ -1,0 +1,47 @@
+{
+  "id": "breakingbad",
+  "display_name": "Breaking Bad",
+  "source": {
+    "type": "html_transcripts",
+    "description": "Forever Dreaming fan transcripts, all 5 seasons (scene directions + dialogue)",
+    "ref": "transcripts.foreverdreaming.org forum f=165"
+  },
+  "characters": [
+    {
+      "index": 0,
+      "name": "Walter White"
+    },
+    {
+      "index": 1,
+      "name": "Skyler White"
+    },
+    {
+      "index": 2,
+      "name": "Jesse Pinkman"
+    },
+    {
+      "index": 3,
+      "name": "Hank Schrader"
+    },
+    {
+      "index": 4,
+      "name": "Marie Schrader"
+    },
+    {
+      "index": 5,
+      "name": "Walter White Jr."
+    },
+    {
+      "index": 6,
+      "name": "Mike Ehrmantraut"
+    },
+    {
+      "index": 7,
+      "name": "Saul Goodman"
+    },
+    {
+      "index": 8,
+      "name": "Gus Fring"
+    }
+  ]
+}
