@@ -11,7 +11,8 @@ import {
 } from "./types";
 
 /**
- * Scoring math. This MUST stay in sync with build/core/validate.py (lines 35-77).
+ * Scoring math. This MUST stay in sync with build/core/validate.py.
+ * Matching uses cosine similarity on the OCEAN z-vector (pattern, not magnitude).
  * Any change here should be mirrored there, and vice versa.
  */
 
@@ -62,18 +63,33 @@ export function rawToZ(
   return z;
 }
 
-export function euclidean(a: TraitScores, b: TraitScores): number {
-  let sum = 0;
+/**
+ * Cosine similarity between two z-vectors, in [-1, 1] (1 = identical direction).
+ *
+ * We match on the *direction* of the OCEAN z-vector (the trait pattern), not its
+ * magnitude. Plain Euclidean distance penalizes a character by ‖char‖², which made
+ * the two characters nearest the cast centroid a "magnet" for any moderate respondent
+ * (the Sugriva/Angad problem). Cosine drops that magnitude term entirely.
+ */
+export function cosineSimilarity(a: TraitScores, b: TraitScores): number {
+  let dot = 0;
+  let normA = 0;
+  let normB = 0;
   for (const t of TRAITS) {
-    const d = a[t] - b[t];
-    sum += d * d;
+    dot += a[t] * b[t];
+    normA += a[t] * a[t];
+    normB += b[t] * b[t];
   }
-  return Math.sqrt(sum);
+  const denom = Math.sqrt(normA) * Math.sqrt(normB);
+  return denom === 0 ? 0 : dot / denom;
 }
 
 /**
- * Distance from the user's z-vector to every character, sorted closest-first.
- * Friendly similarity = 1 / (1 + distance).
+ * Rank every character by cosine similarity to the user's z-vector, closest-first.
+ *
+ * `similarity` is mapped to a friendly [0, 1] scale ((cos + 1) / 2) for display, and
+ * `distance = 1 - cos` (lower = closer) is kept for any consumer that wants a distance.
+ * Both are monotonic in the underlying cosine, so sort order is unaffected by the mapping.
  */
 export function rankMatches(
   userZ: TraitScores,
@@ -81,12 +97,12 @@ export function rankMatches(
 ): RankedMatch[] {
   return characters
     .map((c) => {
-      const distance = euclidean(userZ, c.z);
+      const cos = cosineSimilarity(userZ, c.z);
       return {
         name: c.name,
         blurb: c.blurb,
-        distance,
-        similarity: 1 / (1 + distance),
+        distance: 1 - cos,
+        similarity: (cos + 1) / 2,
         image: c.image,
       };
     })
