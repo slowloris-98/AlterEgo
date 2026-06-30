@@ -35,6 +35,12 @@ export interface Character {
   blurb: string;
   /** Resolved at load time from public/art/characters/<id>/<slug>.<ext>, if a file exists. */
   image?: string;
+  /**
+   * When true, the character is excluded from matching and display. Their data
+   * (raw/z/blurb/art) is retained so they can be un-hidden by removing this flag —
+   * no rescoring required. Filtered out in loadFranchise (registry.ts).
+   */
+  hidden?: boolean;
 }
 
 export interface TraitStat {
@@ -74,11 +80,21 @@ export interface RankedMatch {
   image?: string;
 }
 
+/** A character match tagged with its source franchise, for cross-universe ranking. */
+export interface UniverseMatch extends RankedMatch {
+  /** Franchise id, e.g. "breakingbad". */
+  franchise: string;
+  /** Franchise display name, e.g. "Breaking Bad". */
+  franchiseName: string;
+}
+
 /** What the /api/match endpoint returns to the client. */
 export interface MatchResult {
   franchise: string;
   match: RankedMatch;
   runnersUp: RankedMatch[];
+  /** Top characters across ALL franchises, ranked by similarity descending. */
+  acrossUniverses: UniverseMatch[];
   /** User's OCEAN scores on a 0-100 scale. */
   traits: TraitScores;
   /** Matched character's raw OCEAN scores (0-100), for radar comparison. */

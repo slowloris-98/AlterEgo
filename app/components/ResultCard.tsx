@@ -81,7 +81,7 @@ export default function ResultCard({
   logId?: string | null;
   onRetake: () => void;
 }) {
-  const { match, runnersUp, traits, matchTraits } = result;
+  const { match, runnersUp, traits, matchTraits, acrossUniverses } = result;
 
   const [rating, setRating] = useState<"up" | "down" | null>(null);
   const [suggestion, setSuggestion] = useState("");
@@ -173,6 +173,38 @@ export default function ResultCard({
           ))}
         </ol>
       </section>
+
+      {/* Across Universes: same profile ranked against every franchise's cast */}
+      {acrossUniverses && acrossUniverses.length > 0 && (
+        <section className="rounded-2xl border border-border bg-surface/40 p-6">
+          <h3 className="text-lg font-semibold text-fg">Across Universes</h3>
+          <p className="mb-4 text-sm text-muted">
+            Who you'd be in every world we know.
+          </p>
+          <ol className="space-y-3">
+            {acrossUniverses.map((u, i) => (
+              <li
+                key={`${u.franchise}-${u.name}`}
+                className="flex items-center gap-3 rounded-lg border border-border/60 bg-surface/40 p-3"
+              >
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-accent/40 text-sm text-accent">
+                  {i + 1}
+                </span>
+                <div className="min-w-0 flex-1">
+                  <p className="font-semibold text-fg">{u.name}</p>
+                  <p className="text-xs uppercase tracking-wide text-accent/70">
+                    {u.franchiseName}
+                  </p>
+                  <p className="truncate text-sm text-muted">{u.blurb}</p>
+                </div>
+                <span className="shrink-0 text-sm text-accent">
+                  {pct(u.similarity)}
+                </span>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )}
 
       {/* Feedback: was the match accurate + open suggestions */}
       <section className="rounded-2xl border border-border bg-surface/40 p-6">

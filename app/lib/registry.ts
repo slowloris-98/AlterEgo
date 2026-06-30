@@ -64,12 +64,25 @@ export function listFranchises(): FranchiseMeta[] {
     .sort((a, b) => a.display_name.localeCompare(b.display_name));
 }
 
+/** Full payload for every discovered franchise. */
+export function loadAllFranchises(): Franchise[] {
+  if (!fs.existsSync(DATA_DIR)) return [];
+  return fs
+    .readdirSync(DATA_DIR)
+    .filter(isFranchiseDir)
+    .map((id) => loadFranchise(id))
+    .filter((f): f is Franchise => f !== null);
+}
+
 /** Full franchise payload (meta + quiz + character data). Null if unknown. */
 export function loadFranchise(id: string): Franchise | null {
   // Guard against path traversal; only accept simple ids.
   if (!/^[a-z0-9_-]+$/i.test(id) || !isFranchiseDir(id)) return null;
   const dir = path.join(DATA_DIR, id);
   const data = readJson<CharacterData>(path.join(dir, "characters.json"));
+  // Drop hidden characters from matching/display. Their data stays in the JSON
+  // (and `stats` is left untouched), so un-hiding needs no rescoring.
+  data.characters = data.characters.filter((c) => !c.hidden);
   // Attach a character image URL where a file exists (decoupled from the regenerated JSON).
   for (const c of data.characters) {
     c.image = findCharacterImage(id, c.name);

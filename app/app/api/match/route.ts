@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { loadFranchise } from "@/lib/registry";
-import { scoreAnswers } from "@/lib/scoring";
+import { loadAllFranchises, loadFranchise } from "@/lib/registry";
+import { rankAcrossUniverses, scoreAnswers } from "@/lib/scoring";
 import { getClientIp, logSubmission } from "@/lib/log";
 import type { MatchResult, TraitScores } from "@/lib/types";
 
@@ -53,6 +53,16 @@ export async function POST(req: Request) {
   const matchCharacter = fr.data.characters.find((c) => c.name === match.name)!;
   const matchTraits: TraitScores = matchCharacter.raw;
 
+  // Same raw profile → the user's closest character in each franchise's cast.
+  const acrossUniverses = rankAcrossUniverses(
+    raw,
+    loadAllFranchises().map((f) => ({
+      id: f.meta.id,
+      name: f.meta.display_name,
+      data: f.data,
+    }))
+  );
+
   // Best-effort logging; never blocks or fails the response. The row id lets
   // the client attach later feedback (thumbs / suggestions) to this submission.
   const logId = await logSubmission({
@@ -68,6 +78,7 @@ export async function POST(req: Request) {
     franchise,
     match,
     runnersUp,
+    acrossUniverses,
     traits: raw,
     matchTraits,
     logId,

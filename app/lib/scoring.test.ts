@@ -43,12 +43,17 @@ function load(franchise: string) {
   const data = JSON.parse(
     fs.readFileSync(path.join(dataDir, "characters.json"), "utf-8")
   ) as CharacterData;
+  // Mirror loadFranchise (registry.ts): hidden characters are excluded from matching.
+  const hidden = new Set(
+    data.characters.filter((c) => c.hidden).map((c) => c.name)
+  );
+  data.characters = data.characters.filter((c) => !c.hidden);
   const keys = (
     JSON.parse(
       fs.readFileSync(path.join(buildOut, "answer_keys.json"), "utf-8")
     ) as { keys: AnswerKey[] }
   ).keys;
-  return { quiz, data, keys };
+  return { quiz, data, keys, hidden };
 }
 
 /** Deterministic PRNG (mulberry32) so the no-magnet check is reproducible. */
@@ -67,10 +72,12 @@ let pass = 0;
 let fail = 0;
 
 for (const franchise of FRANCHISES) {
-  const { quiz, data, keys } = load(franchise);
+  const { quiz, data, keys, hidden } = load(franchise);
 
   // 1. Parity: every answer key resolves to its own character.
   for (const key of keys) {
+    // A hidden character can never be matched; their answer key isn't expected to resolve.
+    if (hidden.has(key.name)) continue;
     const { ranked } = scoreAnswers(key.answers, quiz.questions, data);
     const top = ranked[0].name;
     if (top === key.name) {

@@ -7,6 +7,7 @@ import {
   type Trait,
   type TraitScores,
   type TraitStat,
+  type UniverseMatch,
 } from "./types";
 
 /**
@@ -106,6 +107,33 @@ export function rankMatches(
       };
     })
     .sort((a, b) => a.distance - b.distance);
+}
+
+/**
+ * The user's single best match in EACH franchise, sorted by similarity
+ * descending (so one character per universe — N franchises → N entries).
+ *
+ * The raw 0-100 profile is franchise-agnostic, so we normalize it with each
+ * franchise's own stats (exactly as if the user had taken that quiz) and take
+ * that cast's closest character.
+ *
+ * Note: each franchise's z-space is cast-relative, so cross-franchise
+ * similarities are "comparable enough" to order universes, not a rigorous
+ * absolute metric.
+ */
+export function rankAcrossUniverses(
+  raw: TraitScores,
+  franchises: { id: string; name: string; data: CharacterData }[]
+): UniverseMatch[] {
+  const tops: UniverseMatch[] = [];
+  for (const fr of franchises) {
+    const z = rawToZ(raw, fr.data.stats);
+    const best = rankMatches(z, fr.data.characters)[0];
+    if (best) {
+      tops.push({ ...best, franchise: fr.id, franchiseName: fr.name });
+    }
+  }
+  return tops.sort((a, b) => b.similarity - a.similarity);
 }
 
 /** Full pipeline: answers → raw → z → ranked matches. */

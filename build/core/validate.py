@@ -167,7 +167,8 @@ def run(franchise_dir: Path) -> None:
 
     char_data  = json.loads(characters_path.read_text())
     quiz_data  = json.loads(quiz_path.read_text())
-    characters = char_data["characters"]
+    # Hidden characters are excluded from matching (mirrors loadFranchise in registry.ts).
+    characters = [c for c in char_data["characters"] if not c.get("hidden")]
     stats      = char_data["stats"]
     questions  = quiz_data["questions"]
     franchise_name = config["display_name"]
@@ -236,7 +237,8 @@ def simulate(franchise_dir: Path, n: int = 20000) -> None:
     the match-share distribution. Flags a magnet character if any one exceeds 40%."""
     char_data = json.loads((franchise_dir / "out" / "characters.json").read_text())
     quiz_data = json.loads((franchise_dir / "out" / "quiz.json").read_text())
-    characters = char_data["characters"]
+    # Hidden characters are excluded from matching (mirrors loadFranchise in registry.ts).
+    characters = [c for c in char_data["characters"] if not c.get("hidden")]
     stats      = char_data["stats"]
     questions  = quiz_data["questions"]
     char_names = [c["name"] for c in characters]
