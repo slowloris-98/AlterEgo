@@ -1,20 +1,28 @@
 """
-validate.py — In-character quiz → confusion matrix
+validate.py — quiz scoring regression checks
 
 Usage:
-    python validate.py <franchise_dir>
+    python validate.py <franchise_dir>              # in-character confusion matrix (needs API key)
+    python validate.py <franchise_dir> --simulate   # random-respondent distribution (no API key)
+    python validate.py <franchise_dir> --simulate 50000
 
-For each character in characters.json, asks Claude to answer the quiz as that character,
-runs the answers through the same OCEAN scoring and matching math, and prints a confusion
-matrix. A good result has a strong diagonal (character matches themselves) and no single
-character dominating matches.
+Two complementary checks for the "magnet character" problem:
 
-This is the regression check for the "Daenerys magnet" problem.
+1. Default (confusion matrix): for each character in characters.json, asks Claude to answer
+   the quiz as that character, scores the answers, and prints a confusion matrix. A good
+   result has a strong diagonal (character matches themselves). This only feeds *extreme*
+   in-character answers, so it measures the diagonal — not what a moderate real user gets.
+
+2. --simulate: runs N uniform-random respondents through the exact scoring pipeline and
+   prints the match-share distribution. This is what catches the centroid magnet that the
+   confusion matrix misses (Euclidean nearest-neighbour funnelled moderate users to the two
+   characters nearest the cast centroid; cosine matching fixes it). Needs no API key.
 """
 
 import json
 import math
 import os
+import random
 import sys
 import time
 from pathlib import Path
@@ -30,6 +38,7 @@ TRAITS = ["openness", "conscientiousness", "extraversion", "agreeableness", "neu
 
 # ---------------------------------------------------------------------------
 # Scoring math (mirrors lib/scoring.ts — must stay in sync)
+# Matching uses cosine similarity on the OCEAN z-vector (pattern, not magnitude).
 # ---------------------------------------------------------------------------
 
 def answers_to_raw(answers: dict[str, int], questions: list[dict]) -> dict[str, float]:
@@ -62,17 +71,28 @@ def raw_to_z(raw: dict[str, float], stats: dict) -> dict[str, float]:
     }
 
 
-def euclidean(a: dict[str, float], b: dict[str, float]) -> float:
-    return math.sqrt(sum((a[t] - b[t]) ** 2 for t in TRAITS))
+def cosine_similarity(a: dict[str, float], b: dict[str, float]) -> float:
+    """Cosine similarity between two z-vectors, in [-1, 1] (1 = identical direction).
+
+    We match on the *direction* of the OCEAN z-vector (trait pattern), not its
+    magnitude. Plain Euclidean distance penalizes a character by ‖char‖², which made
+    the characters nearest the cast centroid a "magnet" for moderate respondents
+    (the Sugriva/Angad problem). Cosine drops that magnitude term entirely.
+    """
+    dot = sum(a[t] * b[t] for t in TRAITS)
+    norm_a = math.sqrt(sum(a[t] ** 2 for t in TRAITS))
+    norm_b = math.sqrt(sum(b[t] ** 2 for t in TRAITS))
+    denom = norm_a * norm_b
+    return 0.0 if denom == 0 else dot / denom
 
 
 def find_match(user_z: dict[str, float], characters: list[dict]) -> str:
     best_name = ""
-    best_dist = float("inf")
+    best_sim = float("-inf")
     for c in characters:
-        d = euclidean(user_z, c["z"])
-        if d < best_dist:
-            best_dist = d
+        s = cosine_similarity(user_z, c["z"])
+        if s > best_sim:
+            best_sim = s
             best_name = c["name"]
     return best_name
 
@@ -207,8 +227,60 @@ def run(franchise_dir: Path) -> None:
         print(f"✓ No magnet character detected. Most matched: '{most_matched}' ({most_count}/{total})")
 
 
+# ---------------------------------------------------------------------------
+# Random-respondent distribution (no API key)
+# ---------------------------------------------------------------------------
+
+def simulate(franchise_dir: Path, n: int = 20000) -> None:
+    """Run N uniform-random respondents through the scoring pipeline and report
+    the match-share distribution. Flags a magnet character if any one exceeds 40%."""
+    char_data = json.loads((franchise_dir / "out" / "characters.json").read_text())
+    quiz_data = json.loads((franchise_dir / "out" / "quiz.json").read_text())
+    characters = char_data["characters"]
+    stats      = char_data["stats"]
+    questions  = quiz_data["questions"]
+    char_names = [c["name"] for c in characters]
+
+    random.seed(0)  # deterministic so the check is reproducible
+    counts: dict[str, int] = {name: 0 for name in char_names}
+    for _ in range(n):
+        answers = {q["id"]: random.randint(1, 5) for q in questions}
+        z = raw_to_z(answers_to_raw(answers, questions), stats)
+        counts[find_match(z, characters)] += 1
+
+    ranked = sorted(counts.items(), key=lambda kv: kv[1], reverse=True)
+    print(f"\n--- Random-respondent distribution (N={n}) ---")
+    for name, c in ranked:
+        bar = "#" * round(c / n * 50)
+        print(f"  {name.ljust(max(len(x) for x in char_names))}  {c / n * 100:5.1f}%  {bar}")
+
+    top2     = sum(c for _, c in ranked[:2]) / n
+    reachable = sum(1 for _, c in ranked if c / n >= 0.01)
+    never     = [name for name, c in ranked if c == 0]
+    print(f"\nTop-2 share: {top2 * 100:.0f}%   Reachable (>=1%): {reachable}/{len(char_names)}")
+    if never:
+        print(f"Never matched: {', '.join(never)}")
+
+    top_name, top_count = ranked[0]
+    if top_count / n > 0.40:
+        print(f"⚠️  MAGNET WARNING: '{top_name}' attracts {top_count / n * 100:.0f}% of random respondents.")
+    else:
+        print(f"✓ No magnet character. Most matched: '{top_name}' ({top_count / n * 100:.0f}%).")
+
+
 if __name__ == "__main__":
+    # Ensure the ✓ / ⚠️ status glyphs survive on consoles defaulting to cp1252 (Windows).
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except AttributeError:
+        pass
     if len(sys.argv) < 2:
-        print("Usage: python validate.py <franchise_dir>")
+        print("Usage: python validate.py <franchise_dir> [--simulate [N]]")
         sys.exit(1)
-    run(Path(sys.argv[1]))
+    franchise_dir = Path(sys.argv[1])
+    if "--simulate" in sys.argv:
+        i = sys.argv.index("--simulate")
+        n = int(sys.argv[i + 1]) if len(sys.argv) > i + 1 and sys.argv[i + 1].isdigit() else 20000
+        simulate(franchise_dir, n)
+    else:
+        run(franchise_dir)
