@@ -5,6 +5,86 @@ with the alternatives considered and their tradeoffs. Newest first.
 
 ---
 
+## 2026-06-29 — Cosine similarity for character matching (fix centroid magnet)
+
+### Problem
+
+The match step found the **Euclidean-nearest** character to the user's OCEAN z-vector
+([scoring.ts](app/lib/scoring.ts), mirrored in [validate.py](build/core/validate.py)). Expanding
+the squared distance, `dist² = ‖user‖² − 2·(user·char) + ‖char‖²`, the `‖char‖²` term **penalizes
+every extreme character**. The characters whose z-vector sits closest to the cast centroid therefore
+win for any respondent who answers near the middle — which Likert averaging + reverse-coding makes
+the common case.
+
+This is the matching-side twin of the 2026-06-27 "everyone matches Daenerys" failure, and it was
+**systemic across all franchises**. A 20,000 uniform-random-respondent simulation through the real
+pipeline funnelled the bulk of users into the one or two lowest-z-magnitude characters:
+
+| Franchise | Top-2 share | Reachable (≥1%) | Magnet(s) |
+|-----------|-------------|-----------------|-----------|
+| ramayana  | **71%** | 10/14 | Sugriva, Angad |
+| hp        | **66%** | 8/15  | Ginny, Harry |
+| friends   | **60%** | 6/11  | Chandler, Rachel |
+| breakingbad | **57%** | 7/9 | Hank, Skyler |
+| got       | **41%** | 14/25 | Robb/Arya/Daenerys; Joffrey **never** matched |
+
+The existing [validate.py](build/core/validate.py) confusion-matrix check did **not** catch this: it
+only feeds *in-character* answer keys (extreme answers that land near their own character), so it
+measures the diagonal, never what a moderate real user gets.
+
+---
+
+### Option A (considered, NOT chosen) — unit-normalize z-vectors, keep Euclidean
+
+Normalize each character's z-vector (and the user's) to unit length, then keep Euclidean distance.
+
+**Pros**
+- Removes the `‖char‖²` magnitude penalty; mathematically near-identical to cosine.
+- Leaves room to later blend a mild *intensity* term back in (distance on the unit sphere + a
+  magnitude factor).
+
+**Cons**
+- More machinery than needed for a result that is, in practice, the same as cosine.
+- Two-step (normalize then distance) is less direct to read and to keep in sync across the TS and
+  Python implementations.
+
+---
+
+### Option B (CHOSEN) — cosine similarity
+
+Rank characters by **cosine similarity** of the user's z-vector to each character's z-vector — i.e.
+match on the *pattern/direction* of the traits, not their intensity. This drops the `‖char‖²` penalty
+entirely.
+
+**Pros**
+- Simplest, standard "which character are you most like" fix; one helper in each of
+  [scoring.ts](app/lib/scoring.ts) and [validate.py](build/core/validate.py).
+- **Preserves every answer-key diagonal** — all 74 keys across the 5 franchises still self-match, so
+  no character regressed.
+- Top-2 shares drop to **23–45%** and nearly every character becomes reachable (e.g. ramayana
+  14/14, got 21/25, Joffrey reachable again).
+
+**Cons / accepted tradeoffs**
+1. **Slightly higher extreme-character share** under uniform-random answering (e.g. villains), because
+   random answering is itself unrealistic; real users cluster less extremely. Accepted — far better
+   than the centroid magnet.
+2. **Thinner winning margins** on tightly-packed casts (got/ramayana smallest cosine margin ~0.02 vs
+   comfortable Euclidean gaps). Still correct, but the diagonal is less padded if a character's OCEAN
+   profile is later tweaked.
+3. Cosine ranges `[-1, 1]`; the displayed match percentage maps it to `(cos + 1) / 2 ∈ [0, 1]` so the
+   UI stays monotonic and never shows a negative percentage. Sort order is unaffected.
+
+### Decision
+
+Adopt **cosine similarity**, mirrored in [scoring.ts](app/lib/scoring.ts) and
+[build/core/validate.py](build/core/validate.py) (the two implementations must stay in sync). Guard
+against regression with the per-franchise **no-magnet** check (no character >40% of random
+respondents) plus answer-key parity in [scoring.test.ts](app/lib/scoring.test.ts), and add a
+`validate.py --simulate [N]` mode that prints the random-respondent distribution so the bias can be
+re-measured for any new franchise without an API key.
+
+---
+
 ## 2026-06-27 — Replace pairwise OCEAN comparison with per-segment single-shot rating
 
 ### Problem
