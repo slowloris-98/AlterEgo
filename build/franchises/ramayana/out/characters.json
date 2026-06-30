@@ -165,7 +165,8 @@
         "agreeableness": -1.6031,
         "neuroticism": 0.4681
       },
-      "blurb": "Manipulative schemer who's emotionally volatile, self-serving, and utterly ruthless."
+      "blurb": "Manipulative schemer who's emotionally volatile, self-serving, and utterly ruthless.",
+      "hidden": true
     },
     {
       "name": "Sugriva",
@@ -237,7 +238,8 @@
         "agreeableness": 0.0315,
         "neuroticism": 0.1396
       },
-      "blurb": "Angad is a likable, straightforward warrior who acts without overthinking consequences."
+      "blurb": "Angad is a likable, straightforward warrior who acts without overthinking consequences.",
+      "hidden": true
     },
     {
       "name": "Jambavan",

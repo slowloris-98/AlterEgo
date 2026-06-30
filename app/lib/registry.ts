@@ -80,6 +80,9 @@ export function loadFranchise(id: string): Franchise | null {
   if (!/^[a-z0-9_-]+$/i.test(id) || !isFranchiseDir(id)) return null;
   const dir = path.join(DATA_DIR, id);
   const data = readJson<CharacterData>(path.join(dir, "characters.json"));
+  // Drop hidden characters from matching/display. Their data stays in the JSON
+  // (and `stats` is left untouched), so un-hiding needs no rescoring.
+  data.characters = data.characters.filter((c) => !c.hidden);
   // Attach a character image URL where a file exists (decoupled from the regenerated JSON).
   for (const c of data.characters) {
     c.image = findCharacterImage(id, c.name);

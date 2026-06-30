@@ -35,6 +35,12 @@ export interface Character {
   blurb: string;
   /** Resolved at load time from public/art/characters/<id>/<slug>.<ext>, if a file exists. */
   image?: string;
+  /**
+   * When true, the character is excluded from matching and display. Their data
+   * (raw/z/blurb/art) is retained so they can be un-hidden by removing this flag —
+   * no rescoring required. Filtered out in loadFranchise (registry.ts).
+   */
+  hidden?: boolean;
 }
 
 export interface TraitStat {
